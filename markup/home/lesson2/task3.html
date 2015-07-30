@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+		<title>TASK-2</title>
+	</head>
+	<body>
+        <form action="/echo" method="post">
+            <label for="name">Name</label><br>
+                <input type="text" name="name" id="name" placeholder="example: Oleg Ivanov"><br><br>
+            <label for="email">Email</label><br>
+                <input type="text" name="email" id="email" placeholder="example: GoIt@gmail.com"><br><br>
+            <label>Sex</label><br>
+                <input type="radio" value="male" name="sex">Male
+	            <input type="radio" value="femail" name="sex">Female
+<br><br>
+	       <label>Current status</label><br>
+	           <input type="checkbox" name="student" value="status1">Student<br>
+	           <input type="checkbox" name="employed" value="status2">Employed<br>
+	           <input type="checkbox" name="unemployed" value="status3">Unemployed<br><br>
+            <label>Month and year of birth</label><br>
+               <select name="month">
+	               <option value="jan">January</option>
+	               <option value="feb">February</option>
+	               <option value="mar">March</option>
+	               <option value="apr">April</option>
+	               <option value="may">May</option>
+	               <option value="jun">June</option>
+	               <option value="jul">July</option>
+	               <option value="aug">August</option>
+	               <option value="sep">September</option>
+	               <option value="oct">October</option>
+	               <option value="nov">November</option>
+	               <option value="dec">December</option>
+               </select>
+	           <select name="year">
+	               <option value="80">1980</option>
+	               <option value="81">1981</option>
+	               <option value="82">1982</option>
+	               <option value="83">1983</option>
+	               <option value="84">1984</option>
+	               <option value="85">1985</option>
+	               <option value="86">1986</option>
+	               <option value="87">1987</option>
+	               <option value="88">1988</option>
+	               <option value="89">1989</option>
+	               <option value="90">1990</option>
+	           </select>
+<br><br>
+           <label>Skills and Technologies</label><br>
+                <select name="skills" multiple size="10">
+                    <optgroup label="Tech skills">
+                        <option>HTML</option>
+                        <option>CSS</option>
+                        <option>JavaScript</option>
+                        <option>git</option>
+                    </optgroup>
+                    <optgroup label="Soft skills">
+                        <option>Time managment</option>
+                        <option>Proactivity</option>
+                        <option>Teamwork</option>
+                        <option>Leadership</option>
+                    </optgroup>
+                </select>
+<br><br>
+            <label>Photo</label><br>
+            <input type="file">
+<br><br>
+            <label for="comments">Comments</label><br>
+            <textarea id="comments" rows="4" cols="30"></textarea>
+<br><br>
+            <input type="submit" value="Save">
+        </form>
+    </body>
+</html>
