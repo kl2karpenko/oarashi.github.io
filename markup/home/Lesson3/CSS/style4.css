@@ -9,7 +9,10 @@ a[href^="https://"]
 a[href$="google.com"] {
     color: \#666;
 }
-a[target] {
-    background: url("../img/arrow.png") no-repeat bottom right;
-    padding-right: 15px;
+a[target^="_blank"]:after {
+    content: '\2197';
+    border-right: 1px solid;
+    border-top: 1px solid;
+    text-decoration: none;
 }
+
