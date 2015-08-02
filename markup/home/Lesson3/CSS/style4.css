@@ -9,15 +9,12 @@ a[href^="https://"]
 a[href$="google.com"] {
     color: \#666;
 }
-li a[target^="_blank"] {
-    display: inline-block;
-}
-
 a[target^="_blank"]:after {
     content: '\2197';
     border-right: 1px solid;
     border-top: 1px solid;
     margin-left: 5px;
     font-size: 9px;
+    display: inline-block;
 }
 
