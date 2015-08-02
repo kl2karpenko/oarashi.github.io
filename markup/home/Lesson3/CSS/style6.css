@@ -1,0 +1,32 @@
+div input {
+display: none}
+div label {
+    text-decoration: underline;
+    margin-right: 20px;
+}
+div label:nth-of-type(1) {
+    color: red;
+}
+div label:nth-of-type(2) {
+    color: green;
+}
+div label:nth-of-type(3) {
+    color: blue;
+}
+input#red:checked ~ span.red {
+    background: red;
+    border-radius: 5px;
+    color: white;
+
+}
+input#green:checked ~ span.green {
+    background: green;
+    border-radius: 5px;
+    color: white;
+
+}
+input#blue:checked ~ span.blue {
+    background: blue;
+    border-radius: 5px;
+    color: white;
+}
