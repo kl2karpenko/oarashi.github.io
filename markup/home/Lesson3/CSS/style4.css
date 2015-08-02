@@ -1,3 +1,6 @@
+:link {
+    font-size: 20px;
+}
 a[href^="http://"],
 a[href^="https://"]
 {
@@ -5,4 +8,8 @@ a[href^="https://"]
 }
 a[href$="google.com"] {
     color: \#666;
+}
+a[target] {
+    background: url("../img/arrow.png") no-repeat 100% 10px;
+    padding-right: 13px;
 }
