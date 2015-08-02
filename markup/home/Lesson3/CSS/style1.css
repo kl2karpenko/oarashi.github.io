@@ -14,8 +14,11 @@ em {
     color: orange;
     font-weight: bold;
 }
-ul li {
+ul > li {
     font-weight: bold;
+}
+ol li {
+font-weight: normal
 }
 
 #warehouse h2{
@@ -23,6 +26,7 @@ ul li {
 }
 #allotment .fruits-list  {
     color: gray;
+
 }
 .vegetables-list {
     color: red;
