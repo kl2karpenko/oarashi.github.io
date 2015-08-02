@@ -1,0 +1,8 @@
+a[href^="http://"],
+a[href^="https://"]
+{
+    color: #f70;
+}
+a[href$="google.com"] {
+    color: \#666;
+}
