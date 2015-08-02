@@ -10,6 +10,6 @@ a[href$="google.com"] {
     color: \#666;
 }
 a[target] {
-    background: url("../img/arrow.png") no-repeat 100% 10px;
-    padding-right: 13px;
+    background: url("../img/arrow.png") no-repeat bottom right;
+    padding-right: 15px;
 }
