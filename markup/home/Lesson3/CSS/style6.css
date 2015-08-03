@@ -1,29 +1,37 @@
 div input {
-display: none}
+display: none;
+}
 div label {
     text-decoration: underline;
     margin-right: 20px;
 }
-div label:nth-of-type(1) {
+label[for="red"] {
     color: red;
 }
-div label:nth-of-type(2) {
+label[for="green"] {
     color: green;
 }
-div label:nth-of-type(3) {
+label[for="blue"] {
     color: blue;
+}
+input#red:checked ~ label[for="red"] {
+opacity: 0.4;
+}
+input#green:checked ~ label[for="green"] {
+opacity: 0.4;
+}
+input#blue:checked ~ label[for="blue"] {
+opacity: 0.4;
 }
 input#red:checked ~ span.red {
     background: red;
     border-radius: 5px;
     color: white;
-
 }
 input#green:checked ~ span.green {
     background: green;
     border-radius: 5px;
     color: white;
-
 }
 input#blue:checked ~ span.blue {
     background: blue;

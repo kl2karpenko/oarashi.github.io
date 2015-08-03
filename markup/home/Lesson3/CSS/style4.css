@@ -17,5 +17,6 @@ a[target^="_blank"]:after {
     font-size: 9px;
     display: inline-block;
     width: 9px;
+    font-weight: bold;
 }
 
