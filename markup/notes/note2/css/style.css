@@ -1,0 +1,9 @@
+.navig {
+    position: relative;
+    background-color: red;
+}
+
+.rightside {
+    float: right;
+    margin-top: -33px;
+}
