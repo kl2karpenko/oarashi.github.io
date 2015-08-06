@@ -3,12 +3,31 @@
     margin: 0;
 }
 .pager {
-width: 100%;
+    width: 100%;
+    display: inline-block;
 }
 .pager ul {
-list-style: none;
+    list-style: none;
+    text-align: center;
+    background-color:azure;
+    margin-top: 10px;
+    font-size: smaller;
+    color: #9966FF;
 }
 .pager ul li {
-float: left;
-    margin: 0 5px;
+    display: inline-block;
+    margin: 5px;
+    text-decoration: none;
+}
+.pager a {
+    text-decoration: none;
+}
+.number {
+    border: solid 1px;
+    border-color: gray;
+    border-radius: 5px;
+    padding: 3px 5px 3px 5px;
+}
+.more {
+    padding: 3px 5px 3px 5px;
 }
