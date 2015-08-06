@@ -7,17 +7,20 @@
     height: 35px;
     background-color: #9966FF;
     margin-top: 15px;
+    box-shadow: 0px -2px 5px 0px rgba(50, 50, 50, 0.38),
+                0px 2px 5px 0px rgba(50, 50, 50, 0.50);
 }
 .container1 ul {
     list-style-type: none;
     margin: 0 auto;
     width: 900px;
-    height:
 }
 .container1 li {
     float: left;
     display: block;
     padding-top: 8px;
+    font-family: impact;
+    letter-spacing: 2px;
 }
 .container1 li a {
     text-decoration: none;
@@ -31,6 +34,7 @@
 .container1 a:hover {
     background-color: #eeeeee;
     color: #a1a1a1;
-    padding: 11px 20px 11px 20px;
+    padding: 10px 20px 12px 20px;
     border-radius: 5px;
+    color: gray;
 }
