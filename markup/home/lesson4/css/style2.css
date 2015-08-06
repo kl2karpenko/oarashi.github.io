@@ -1,21 +1,36 @@
-body {
-    font-family: impact;
+* {
+    margin: 0;
+    padding: 0;
 }
-div {
-    border: solid 5px;
+.container1 {
     width: 100%;
-    background-color: mediumpurple;
-    text-align: center;
-    }
-.container1_menu1 li {
-    float: left;
-    margin-left: 10px;
+    height: 35px;
+    background-color: #9966FF;
+    margin-top: 15px;
+}
+.container1 ul {
     list-style-type: none;
-}
-.container1_menu2 {
+    margin: 0 auto;
     width: 900px;
+    height:
 }
-.container1_menu2 li {
-   list-style-type: none;
-    text-align: right;
+.container1 li {
+    float: left;
+    display: block;
+    padding-top: 8px;
+}
+.container1 li a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px 13px 20px;
+}
+
+.container1-menu2 li:last-of-type {
+    float: right;
+}
+.container1 a:hover {
+    background-color: #eeeeee;
+    color: #a1a1a1;
+    padding: 11px 20px 11px 20px;
+    border-radius: 5px;
 }
