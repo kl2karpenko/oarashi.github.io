@@ -9,7 +9,6 @@ body {
 }
 #container_menu1 {
     list-style-type: none;
-    display: inline-block;
     text-align: center;
     width: 900px;
     padding: 10px;
