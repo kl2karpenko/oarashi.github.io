@@ -38,3 +38,6 @@
     border-radius: 5px;
     color: gray;
 }
+.clean {
+    clear: both;
+}

@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.container {
+    margin-top: 10px;
+    clear: both;
+    height: 35px;
+    width: 100%;
+    clear: both;
+    background-color:#9966FF;
+    }
+.container li {
+    list-style-type: none;
+    color: white;
+}
+.menu {
+    width: 900px;
+    position: relative;
+}
+.menu li{
+    float: left;
+    margin: 10px;
+    position: relative;
+
+}
+.menu li:last-of-type {
+    float: right;
+    margin: 10px;
+    position: relative;
+}
+.container ul{
+    margin: 0 auto;
+}
+.container a{
+    padding: 10px 20px 10px 20px;
+    color: white;
+    font-family: impact;
+    letter-spacing: 2px;
+    border-radius: 10px;
+}
+.container a:hover{
+    background-color: gray;
+    color: white;
+    padding: 11px 20px 8px 20px;
+
+}
