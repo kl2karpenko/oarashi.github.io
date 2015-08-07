@@ -4,44 +4,38 @@
 }
 .container {
     margin-top: 10px;
-    clear: both;
-    height: 35px;
     width: 100%;
-    clear: both;
     background-color:#9966FF;
-    }
-.container li {
-    list-style-type: none;
-    color: white;
+    box-shadow: 0px -2px 5px 0px rgba(50, 50, 50, 0.38),
+                0px 2px 5px 0px rgba(50, 50, 50, 0.50);
 }
 .menu {
     width: 900px;
-    position: relative;
+    margin: 0 auto;
 }
-.menu li{
+.menu li {
+    list-style-type: none;
+    color: white;
     float: left;
-    margin: 10px;
-    position: relative;
-
+    margin: 10px 0px 10px 0px;
 }
 .menu li:last-of-type {
     float: right;
-    margin: 10px;
-    position: relative;
 }
-.container ul{
-    margin: 0 auto;
-}
-.container a{
-    padding: 10px 20px 10px 20px;
+.menu a{
+    text-decoration: none;
+    padding: 11px 30px 12px 30px;
     color: white;
     font-family: impact;
     letter-spacing: 2px;
     border-radius: 10px;
 }
-.container a:hover{
-    background-color: gray;
-    color: white;
-    padding: 11px 20px 8px 20px;
-
+.menu a:hover{
+    background-color: #eeeeee;;
+    color: #a1a1a1;
+}
+ul:after {
+        display: block;
+        content: "";
+        clear: both;
 }
