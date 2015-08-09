@@ -31,10 +31,7 @@
     background-color: #8913d8;
     color: white;
 }
-.more a{
+.more a, .direct a {
     border-color: transparent;
     ;
-}
-.direct a{
-    border-color: transparent;
 }
