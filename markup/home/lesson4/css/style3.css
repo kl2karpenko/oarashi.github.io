@@ -4,30 +4,37 @@
 }
 .pager {
     width: 100%;
-    display: inline-block;
+    display: block;
 }
 .pager ul {
     list-style: none;
     text-align: center;
-    background-color:azure;
+    background-color:#f2f2f2;
     margin-top: 10px;
     font-size: smaller;
     color: #9966FF;
 }
-.pager ul li {
+.pager li {
     display: inline-block;
     margin: 5px;
     text-decoration: none;
 }
 .pager a {
     text-decoration: none;
-}
-.number {
+    color: #8913d8;
     border: solid 1px;
-    border-color: gray;
+    border-color: #8913d8;
     border-radius: 5px;
     padding: 3px 5px 3px 5px;
 }
-.more {
-    padding: 3px 5px 3px 5px;
+.pager a:hover {
+    background-color: #8913d8;
+    color: white;
+}
+.more a{
+    border-color: transparent;
+    ;
+}
+.direct a{
+    border-color: transparent;
 }
