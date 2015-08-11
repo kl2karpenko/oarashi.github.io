@@ -1,0 +1,87 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+.box1 {
+    background-color: #ed7f2b;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: Trebuchet MS;
+    width: 296px;
+    height: 468px;
+    border-radius: 5px;
+    position: relative;
+    left: 100px;
+    top: 10px;
+    }
+.box1-head {
+    color: #ffffff;
+    font-weight: bold;
+    padding-top: 25px;
+    font-size: 24px;
+}
+.box1-body {
+    background-color: #ffffff;
+    color: #354959;
+    width: 288px;
+    margin: 0 auto;
+    position: relative;
+    top: 4px;
+    height: 387px;
+    font-size: 20px;
+}
+p {
+    margin: 20px;
+    position: relative;
+    top: 10px;
+}
+.box1 sup {
+    position: relative;
+    top: -20px;
+}
+.box1 sub {
+    text-transform: capitalize;
+    position: relative;
+    bottom: -4px;
+
+}
+.box1-body span {
+    font-size: 50px;
+    font-weight: bold;
+}
+.box1 ul{
+    list-style-type: none;
+    text-align: left;
+    margin: 5px 10px 20px 10px;
+    position: relative;
+    top: 30px;
+    text-indent: 30px;
+}
+.box1 li {
+    padding-bottom: 15px;
+    background-color: #edf5fc;
+}
+.box1 ul li::before{
+    content: "";
+    padding-left: 30px;
+    background-image: url(../img/list.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+ul :nth-of-type(2n) {
+    background-color: #f5f5f5;
+}
+ul :nth-child(n+3){
+    text-transform: capitalize;
+}
+.box1 input {
+    background-color: #ed7f2b;
+    width: 252px;
+    height: 38px;
+    border-radius: 5px;
+    color: #ffffff;
+    text-transform: uppercase;
+    position: relative;
+    top: 25px;
+    font-weight: bolder;
+}
