@@ -1,0 +1,60 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.pricebox1 {
+    background-color: #ed7f2b;
+    width: 296px;
+    height: 468px;
+    position: relative;
+    left: 100px;
+    font: bold 24px/70px "trebuchet MS", sans-serif;
+    color: #fff;
+    text-align: center;
+    text-transform:uppercase;
+    border-radius: 5px;
+}
+.pricebox1-body {
+    background-color: #ffffff;
+    color: #666;
+    width: 288px;
+    height: 387px;
+    position: absolute;
+    bottom: 4px;
+    right: 4px;
+}
+span {
+    font-size: 50px;
+}
+sup {
+    position: relative;
+    top: -25px;
+}
+sub {
+    text-transform: capitalize;
+    position: relative;
+    bottom: -7px;
+}
+.pricebox1-body ul {
+    list-style-type: none;
+    line-height: 40px;
+    text-align: left;
+}
+.pricebox1-body li {
+    padding-bottom: 1px;
+    background-color: #edf5fc;
+    border-bottom: 1px solid #ffffff;
+}
+ul :nth-of-type(2n) {
+    background-color: #f5f5f5;
+}
+ul :nth-child(n+3){
+    text-transform: none;
+}
+.pricebox1 ul li::before{
+    content: "";
+    padding-left: 30px;
+    background-image: url(../img/list.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
