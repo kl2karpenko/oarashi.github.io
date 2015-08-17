@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+h2 {
+    font-size: 40px;
+    color: blue;
+    text-transform: uppercase;
+    padding-top: 50px;
+}
+.orange {
+    color: orange;
+}
+.feedback {
+    top: 30px;
+    margin: 0 auto;
+    text-align: center;
+    background: url("../img/fon2.png");
+    position: relative;
+    widows: 100%;
+}
+.feedback div {
+    display: inline-block;
+    position: relative;
+    margin: 30px 0px 50px 30px;
+}
+.comment {
+    display: inline-block;
+    background-color: #fff;
+    width: 330px;
+    line-height: 20px;
+    text-align: left;
+    color: gray;
+}
+.comment p {
+    margin-bottom: 10px;
+}
+.comment p:first-child {
+    color: dodgerblue;
+    margin: 3% 3% 6% 3%;
+    font-style: italic;
+    font-weight: bold;
+}
+.comment:after {
+    content: '';
+    position: absolute;
+    left: -40px; bottom: 28px;
+    border: 20px solid transparent;	border-right: 20px solid #fff;
+}
+.right {
+    float: right;
+    margin-right:  3%;
+}
+.foto {
+    top: 15px;
+}
