@@ -1,0 +1,295 @@
+/*CSS RESET*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-weight: inherit;
+	font-style: inherit;
+	font-size: 100%;
+	font-family: inherit;
+	vertical-align: baseline;
+}
+/* remember to define focus styles! */
+:focus {
+	outline: 0;
+}
+body {
+	line-height: 1;
+	color: black;
+	background: white;
+}
+ol, ul {
+	list-style: none;
+}
+table {
+	border-collapse: separate;
+	border-spacing: 0;
+}
+caption, th, td {
+	text-align: left;
+	font-weight: normal;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: "";
+}
+blockquote, q {
+	quotes: "" "";
+}
+/* --END OF CSS-RESET--*/
+
+body {
+    width: 1400px;
+    height: 3309px;
+    background-color: #fff;
+    font-family: "trebuchet ms" sans-serif;
+    position: relative;
+    text-align: center;
+}
+header {
+    background-color: #fff;
+    font-size: 20px;
+    width: 1025px;
+    height: 70px;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+header h2 {
+    float: left;
+    color: #3070a8;
+    font: 300 36px / 30px FuturaBT;
+    text-transform: uppercase;
+    padding-top: 18px;
+}
+.orange {
+    color: #ee8129;
+    text-transform: capitalize
+}
+.menu {
+    float: right;
+    width: 563px;
+    padding-right: 10%;
+}
+.menu li {
+    display: inline-block;
+    position: relative;
+    top: 35px;
+    font-size: 14px;
+}
+.menu a {
+    text-decoration: none;
+    color: #989898;
+    text-transform: uppercase;
+    padding: 14px 5px;
+}
+.menu a:hover {
+    color: #3070a8;
+    border-bottom: 2px solid #3070a8;
+}
+.banner {
+    background: url(../img/fon-banner.png);
+    width: 1400px;
+    height: 585px;
+    color: #fff;
+    font-size: 36px;
+}
+.banner h4 {
+    font-size: 48px;
+    line-height: 50px;
+    text-transform: uppercase;
+}
+.banner :nth-child(3) {
+    font: italic 20px/30px Calibri;
+}
+.banner div {
+    position: relative;
+    top: 175px;
+}
+.banner input {
+    position: relative;
+    top: 40px;
+    background-color: transparent;
+    padding: 15px 50px;
+    border: 1px solid #fff;
+    border-style: dotted;
+    color: #fff;
+    text-transform: uppercase;
+}
+.container {
+    text-transform: uppercase;
+    text-align: center;
+}
+.container div {
+    font-family: "Trebuchet MS" serif;
+    position: relative;
+}
+.container p {
+    font: 25px/70px bold "Trebuchet MS" serif;
+    padding-top: 50px;
+}
+.container sup {
+    position: relative;
+    top: -40px;
+    right: -10px;
+    font-size: 24px;
+}
+.container sub {
+    text-transform: capitalize;
+    position: relative;
+    bottom: -4px;
+    font-size: 20px;
+}
+.container span {
+    font-size: 70px;
+    font-weight: bold;
+}
+.container ul {
+    list-style-type: none;
+    text-align: left;
+    margin: 25px 10px 20px 10px;
+    text-indent: 30px;
+}
+.container ul :nth-of-type(2n) {
+    background-color: #f5f5f5;
+}
+.container li {
+    font-size: 18px;
+    line-height: 30px;
+    color: #828282;
+    padding-bottom: 1px;
+    background-color: #edf5fc;
+    border-bottom: 1px solid #ffffff;
+    text-transform: capitalize;
+}
+.container ul li::before{
+    content: "";
+    padding-left: 30px;
+    background-image: url(../img/list.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.container input {
+    background-color: #2F70A8;
+    width: 252px;
+    height: 38px;
+    border-radius: 5px;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-weight: bold;
+    box-shadow: 0px 3px 0px #13426B;
+    margin-bottom: 10px;
+}
+.container div:first-child {
+    color: #fff;
+    font-weight: bold;
+    font-size: 24px;
+}
+.box1 {
+    border: 1px solid;
+    border-color: gray transparent gray gray;
+    border-radius: 5px;
+    width: 290px;
+    display: inline-block;
+    right: -7px;
+}
+.box1-head {
+    background-color: #37c2d3;
+    line-height: 60px;
+}
+.box2 {
+    border: 4px solid #ed7f2b;
+    border-radius: 5px;
+    width: 288px;
+    display: inline-block;
+    box-shadow: 0px 0px 10px 1px #000000;
+    z-index: 10;
+}
+.box2-head {
+    background-color: #ed7f2b;
+    line-height: 70px;
+}
+.box2 input {
+    background-color: #ed7f2b;
+    margin-bottom: 20px;
+    box-shadow: 0px 3px 0px #B3560C;
+}
+.box2 input:active {
+    background-color: #B3560C;
+}
+.box3 {
+    border: 1px solid;
+    border-color: gray gray gray transparent;
+    border-radius: 5px;
+    width: 287px;
+    display: inline-block;
+    left: -7px;
+}
+.box3-head {
+    background-color: #1cb79a;
+    line-height: 60px;
+}
+h2 {
+    font-size: 40px;
+    color: #3170a8;
+    text-transform: uppercase;
+    padding-top: 50px;
+    font-weight: 200;
+}
+.orange {
+    color: #ee8129;
+}
+.feedback {
+    width: 1400px;
+    height: 315px;
+    top: 70px;
+    margin: 0 auto;
+    text-align: center;
+    background: url("../img/fon2.png");
+    position: relative;
+    font-family: "Trebuchet MS", sans-serif;
+}
+.feedback div {
+    display: inline-block;
+    position: relative;
+    margin: 30px 0px 50px 30px;
+}
+.comment {
+    display: inline-block;
+    background-color: #fff;
+    width: 370px;
+    height: 98px;
+    line-height: 18px;
+    text-align: left;
+    color: gray;
+    font-size: 15px;
+    top: -15px
+}
+.comment p {
+    margin: 10px 10px 10px 10px;
+}
+.comment p:first-child {
+    color: #3070a8;
+    margin: 3% 3% 6% 3%;
+    font-style: italic;
+    font-weight: 600;
+    font-size: 13px;
+    border-bottom: 1px dotted;
+}
+.comment:after {
+    content: '';
+    position: absolute;
+    left: -40px; bottom: 28px;
+    border: 20px solid transparent;	border-right: 20px solid #fff;
+}
+.right {
+    float: right;
+    margin-right:  3%;
+}
