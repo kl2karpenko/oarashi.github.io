@@ -13,12 +13,13 @@ h2 {
     color: #ee8129;
 }
 .feedback {
+    width: 1400px;
+    height: 315px;
     top: 30px;
     margin: 0 auto;
     text-align: center;
     background: url("../img/fon2.png");
     position: relative;
-    widows: 100%;
     font-family: "Trebuchet MS", sans-serif;
 }
 .feedback div {
@@ -29,11 +30,13 @@ h2 {
 .comment {
     display: inline-block;
     background-color: #fff;
-    width: 360px;
+    width: 370px;
+    height: 98px;
     line-height: 18px;
     text-align: left;
     color: gray;
     font-size: 15px;
+    top: -15px
 }
 .comment p {
     margin: 10px 10px 10px 10px;
@@ -55,7 +58,4 @@ h2 {
 .right {
     float: right;
     margin-right:  3%;
-}
-.foto {
-    top: 15px;
 }
