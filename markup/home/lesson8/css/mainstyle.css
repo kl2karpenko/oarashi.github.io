@@ -158,17 +158,26 @@ strong {
 }
 .layer-comments h3 {
     font:300 26px / 48px FuturaBT serif;
+    text-transform:uppercase;
 }
 .layer-comments p {
     color: #ffffff;
     font: italic 19px / 30px OpenSans;
+    padding: 10px 0 30px;
 }
 .layer-comments ul {
     color: #9d9d9d;
     font: 400 14px / 30px OpenSans;
+    width: 500px;
+    text-align: left;
+    margin-left: 120px;
 }
 .layer-comments li {
-    list-style: square inside;
+    list-style: disc inside;
+    padding-bottom: 30px;
+}
+.layer-comments ul :nth-child(2) {
+    color: #3070a8;
 }
 /*BLOCK with prices*/
 .prices {
