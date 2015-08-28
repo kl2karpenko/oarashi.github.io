@@ -1,0 +1,97 @@
+/*CSS RESET*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-weight: inherit;
+	font-style: inherit;
+	font-size: 100%;
+	font-family: inherit;
+	vertical-align: baseline;
+}
+/* remember to define focus styles! */
+:focus {
+	outline: 0;
+}
+body {
+	line-height: 1;
+	color: black;
+	background: white;
+}
+ol, ul {
+	list-style: none;
+}
+table {
+	border-collapse: separate;
+	border-spacing: 0;
+}
+caption, th, td {
+	text-align: left;
+	font-weight: normal;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: "";
+}
+blockquote, q {
+	quotes: "" "";
+}
+/* --END OF CSS-RESET--*/
+
+body {
+    font: 24px tahoma sans-serif;
+}
+.blue {
+    color: blue;
+}
+.orange {
+    color: orange;
+}
+.upper {
+    text-transform: uppercase;
+}
+.ital {
+    font-style: italic;
+}
+h1 {
+    font-size: 32px;
+}
+header {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    padding: 20px 5% 20px 0;
+}
+.navi a {
+    text-decoration: none;
+    position: relative;
+    bottom: -20px;
+    padding: 13px 0;
+    text-transform: uppercase;
+    color: gray;
+    font-size: 16px;
+}
+.navi a:hover {
+ border-bottom: 2px solid;
+    color: blue;
+}
+.banner {
+    background: url(../img/fon-banner.png);
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    color: #fff;
+    padding: 5%;
+}
+.banner-container {
+    width: 800px;
+    text-align: center;
+}

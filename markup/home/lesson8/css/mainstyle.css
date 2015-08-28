@@ -124,11 +124,11 @@ strong {
     background-color: #13426B;
     opacity: 0.5;
 }
-/*-put some effects here:
 .banner input:hover {
-    background: rgba
+    border: 3px solid #fff;
+    border-style: dotted;
+    border-radius: 10px;
 }
-*/
 
 /*BLOCK with advaces*/
 .advances h2 {
@@ -155,6 +155,8 @@ strong {
 .layer-comments {
     position: relative;
     width: 680px;
+    padding-left: 150px;
+    text-align: left;
 }
 .layer-comments h3 {
     font:300 26px / 48px FuturaBT serif;
@@ -169,8 +171,7 @@ strong {
     color: #9d9d9d;
     font: 400 14px / 30px OpenSans;
     width: 500px;
-    text-align: left;
-    margin-left: 120px;
+    margin-left: 50px;
 }
 .layer-comments li {
     list-style: disc inside;
@@ -349,5 +350,39 @@ h3 {
 }
 .right {
     float: right;
-    margin-right:  3%;
+    margin-right: 3%;
+}
+
+/*BLOCK with contacts*/
+.contacts {
+    width: 700px;
+    margin-top: 120px;
+    color: #666666;
+    font: 600 14px;
+    line-height: 30px;
+}
+.contacts div:nth-child(2) {
+    padding: 20px;
+}
+.links {
+    margin: 90px;
+}
+.links img {
+    padding: 25px;
+}
+
+/*BLOCK footer*/
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: #3070a8;
+    color: #ffffff;
+    font: 14px/30px;
+}
+.bold {
+    font-weight: 900;
+}
+.site {
+    color: #1d1b1b;
 }
