@@ -308,8 +308,7 @@ h3 {
 .feedback {
     width: 1400px;
     height: 315px;
-    top: 70px;
-    margin: 0 auto;
+    margin-top: 70px;
     text-align: center;
     background: url("../img/fon2.png");
     position: relative;
@@ -345,7 +344,7 @@ h3 {
 .comment:after {
     content: '';
     position: absolute;
-    left: -40px; bottom: 28px;
+    left: -39px; bottom: 28px;
     border: 20px solid transparent;	border-right: 20px solid #fff;
 }
 .right {
@@ -356,19 +355,10 @@ h3 {
 /*BLOCK with contacts*/
 .contacts {
     width: 700px;
-    margin-top: 120px;
     color: #666666;
     font: 600 14px;
     line-height: 30px;
-}
-.contacts div:nth-child(2) {
-    padding: 20px;
-}
-.links {
-    margin: 90px;
-}
-.links img {
-    padding: 25px;
+    text-align:
 }
 
 /*BLOCK footer*/
