@@ -73,6 +73,12 @@ header p {
     color: #ee8129;
     text-transform: capitalize
 }
+.bold {
+    font-weight: 900;
+}
+.site {
+    color: #1d1b1b;
+}
 nav li {
     float: right;
     position: relative;
@@ -354,25 +360,41 @@ h3 {
 
 /*BLOCK with contacts*/
 .contacts {
-    width: 700px;
+    width: 704px;
+    height: 435px;
     color: #666666;
     font: 600 14px;
     line-height: 30px;
-    text-align:
 }
-
+.contacts-info {
+    display: inline-block;
+    margin: 0 auto;
+    text-align: left;
+    width: 275px;
+    padding: 8%;
+    }
+.contacts-info div {
+    display: inline-block;
+    padding: 5px;
+}
+.contacts-info_aboutus-icon {
+    position: relative;
+    top: -75px;
+}
+.contacts-info_phone div:first-child {
+    width: 23px;
+}
+.contacts-info_links img{
+    width: 60px;
+    margin: 20px 10px;
+}
 /*BLOCK footer*/
 footer {
-    position: absolute;
-    bottom: 0;
     width: 100%;
+    height: 94px;
     background-color: #3070a8;
     color: #ffffff;
-    font: 14px/30px;
-}
-.bold {
-    font-weight: 900;
-}
-.site {
-    color: #1d1b1b;
+    font: 14px;
+    line-height: 30px;
+    padding-top: 30px
 }
