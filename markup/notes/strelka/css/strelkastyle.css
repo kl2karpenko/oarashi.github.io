@@ -1,0 +1,36 @@
+.wrapper{
+    margin: 0 auto;
+    width: 50%;
+    min-width: 390px;
+    background: orange;
+}
+.wrapper-search{
+    position: relative;
+    width: 100%;
+    white-space: nowrap;
+}
+.wrapper-search_field input {
+    display: inline-block;
+    width: 80%;
+    margin: 15px 2px 5px 5px;
+}
+.wrapper-submit input {
+    display: inline-block;
+    width: 60px;
+    position: absolute;
+    top: 15px;
+    right: 10px;
+}
+span {
+
+}
+.wrapper-search_rect{
+    width: 42px;
+    height: 42px;
+    position: absolute;
+    top: 9px;
+    right: -21px;
+    transform: scaleX(0.7) rotate(45deg);
+    z-index: -1;
+    background: orange;
+}
