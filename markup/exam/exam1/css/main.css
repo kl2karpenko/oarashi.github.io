@@ -1,0 +1,56 @@
+.page {
+    width: 100%;
+    font: 13px 'Helvetica', 'Arial', sans-serif;
+    position: relative;
+    color: #000;
+    background-color: #fff;
+}
+.container {
+    display: block;
+    position: relative;
+    margin: 0 auto;
+    padding: 0 5px;
+}
+h3 {
+    color: #3498db;
+    font: 400 20px / 42px Helvetica;
+    text-transform: uppercase;
+    margin: 32px;
+}
+h5 {
+    color: #333333;
+    font: 700 15px / 42px Helvetica;
+    text-transform: uppercase;
+    width: 181px;
+    margin: 0 auto;
+}
+
+.header-top {
+    background-color: #3498db;
+    color: #fff;
+}
+.header-middle {
+    background: url(../img/fon1.png) no-repeat;
+    background-size: 100% 100%;
+    color: #fff;
+}
+.bottom-block {
+    background-color: #f2f2f2;
+    position: relative;
+}
+.bottom-block--button {
+    background-color: #e74c3c;
+    display: block;
+    color: #fff;
+    text-decoration: none;
+
+}
+.bottom-block--img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+.footer {
+    background-color: #3498db;
+    color: #fff;
+}
