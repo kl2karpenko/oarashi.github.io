@@ -19,6 +19,9 @@
     .header-top--social {
         padding: 15px 5px;
     }
+    .social__link {
+        padding-top: 3px;
+    }
     .header-top--social__connect {
         display: inline-block;
         position: relative;
@@ -80,6 +83,15 @@
         font-size: 20px;
         margin: 20px;
         cursor: pointer;
+    }
+    .header-form--arrow {
+        position: absolute;
+        top: 78px;
+        right: 50px;
+        width: 17px;
+        height: 14px;
+        opacity: 0.8;
+        z-index: 5;
     }
     .header-bottom {
         padding: 250px 30px 0 30px;
@@ -208,6 +220,7 @@
         position: absolute;
         left: 50%;
         top: 50%;
+        -webkit-transform: translate(-50%, -50%);
         transform: translate(-50%, -50%);
         text-decoration: none;
         font-size: 20px;
@@ -231,6 +244,14 @@
         padding: 0 10px;
         border-radius: 50%;
         margin: 10px auto;
+    }
+
+.bottom-block--button:hover,
+    .bottom-block--button:focus,
+    .bottom-block--button:active {
+    background-color: #3498db;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
     }
     .bottom-block--img {
         position: absolute;
@@ -259,6 +280,7 @@
     }
     .footer--social__connect {
         display: inline-block;
+        text-transform: capitalize;
     }
     .header-top--social__link {
         display: inline-block;
@@ -291,13 +313,17 @@
     }
     .header-top--social__connect {
         display: inline-block;
+        text-transform: capitalize;
     }
-    .header-top--social__link {
+    .social__link {
         display: inline-block;
         vertical-align: middle;
+        padding-top: 3px;
+        margin-right: 5px;
     }
     .header-middle {
         padding: 50px;
+        min-height: 245px;
     }
     .header-middle--heading {
         font: 700 45px / 42px Helvetica;
@@ -316,7 +342,7 @@
         font-weight: bold;
         width: 340px;
         position: absolute;
-        top: -530px;
+        top: -610px;
         right: 25px;
         background-color: #fff;
         border-bottom: 5px solid #3498db;
@@ -329,7 +355,6 @@
         text-transform: uppercase;
         margin: 20px;
     }
-
     .header-form--item {
         width: 260px;
         height: 36px;
@@ -358,9 +383,18 @@
         margin: 10px 0 ;
         cursor: pointer;
     }
+    .header-form--arrow {
+        position: absolute;
+        top: 78px;
+        right: 50px;
+        width: 17px;
+        height: 14px;
+        opacity: 0.8;
+        z-index: 5;
+    }
 
     .header-bottom {
-        min-height: 252px;
+        min-height: 300px;
         background-color: #f2f2f2;
     }
     .header-bottom--heading {
@@ -565,35 +599,11 @@
         display: inline-block;
         vertical-align: middle;
     }
-
     .social__link {
         display: inline-block;
         vertical-align: middle;
         margin-right: 5px;
         padding-top: 3px;
-        -moz-transition: all 0.8s 0.1s ease-in;
-        -o-transition: all 0.8s 0.1s ease-in;
-        -webkit-transition: all 0.8s 0.1s ease-in;
-    }
-    .social__link:hover,
-    .social__link:focus,
-    .social__link:active {
-    -webkit-animation-name: spin;
-    -webkit-animation-duration: 1s;
-    -webkit-animation-iteration-count: infinite;
-    -webkit-animation-timing-function: linear;
-    -moz-animation-name: spin;
-    -moz-animation-duration: 1s;
-    -moz-animation-iteration-count: infinite;
-    -moz-animation-timing-function: linear;
-    -ms-animation-name: spin;
-    -ms-animation-duration: 1s;
-    -ms-animation-iteration-count: infinite;
-    -ms-animation-timing-function: linear;
-    animation-name: spin;
-    animation-duration: 1s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
     }
     .header-top--logo__logo {
         display: inline-block;
@@ -657,19 +667,7 @@
         font-size: 15px;
         line-height: 20px;
         margin-bottom: 10px;
-        -webkit-transition-duration: 0.5s;
-        transition-duration: 0.5s;
-        -webkit-transition-property: -webkit-transform;
-        transition-property: transform;
-    }
-    .header-form--item:hover,
-    .header-form--item:focus,
-    .header-form--item:active {
-        -webkit-transform: scale(1.1);
-        -ms-transform: scale(1.1);
-        transform: scale(1.1);
-        animation-timing-function: linear;
-        animation-duration: 1s;
+
     }
     .header-form--select {
         width: 266px;
@@ -688,16 +686,15 @@
         font-size: 20px;
         margin: 20px;
         cursor: pointer;
-        -moz-transition: all 0.5s 0.1s ease;
-        -o-transition: all 0.5s 0.1s ease;
-        -webkit-transition: all 0.5s 0.1s ease;
     }
-    .header-form--submit:hover,
-    .header-form--submit:focus,
-    .header-form--submit:active {
-        -webkit-transform: scale(1.1);
-        -ms-transform: scale(1.1);
-        background-color: #3498db;
+    .header-form--arrow {
+        position: absolute;
+        top: 78px;
+        right: 50px;
+        width: 17px;
+        height: 14px;
+        opacity: 0.8;
+        z-index: 5;
     }
     .header-bottom {
         background-color: #f2f2f2;
@@ -848,16 +845,8 @@
         background-color: #e74c3c;
         width: 470px;
         z-index: 1;
-        -moz-transition: all 0.5s 0.1s ease;
-        -o-transition: all 0.5s 0.1s ease;
-        -webkit-transition: all 0.5s 0.1s ease;
     }
-    .bottom-block--button:hover,
-    .bottom-block--button:focus,
-    .bottom-block--button:active {
-        background-color: #3498db;
-        transform: scale(1.1);
-    }
+
     .bottom-block--button__text {
         color: #ffffff;
         display: block;
@@ -873,7 +862,7 @@
     }
     .footer--logo {
         float: left;
-        margin: 20px;
+        margin: 30px;
         padding-right: 20px;
         border-right: 1px solid #888;
         color: #ffffff;
@@ -888,7 +877,7 @@
     }
     .footer--right-column {
         display: inline-block;
-        margin-top: 20px;
+        margin-top: 35px;
         max-width: 639px;
     }
     .footer--social__connect {
@@ -898,5 +887,6 @@
     .footer--copyrights {
         color: #ffffff;
         line-height: 18px;
+        margin-bottom: 50px;
     }
 }
