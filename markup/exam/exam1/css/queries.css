@@ -750,9 +750,9 @@
         color: #333333;
         line-height: 42px;
         margin-top: 25px;
-        -moz-transition: all 1s 0.1s ease-in;
-        -o-transition: all 1s 0.1s ease-in;
-        -webkit-transition: all 1s 0.1s ease-in;
+        -moz-transition: all 0.5s 0.1s ease-in;
+        -o-transition: all 0.5s 0.1s ease-in;
+        -webkit-transition: all 0.5s 0.1s ease-in;
         -webkit-perspective:600px;
     }
     .benefits-block__link:hover {
@@ -760,7 +760,6 @@
         color: #fff;
     }
     .responses {
-        margin: 0;
         padding: 0 0 30px 0;
     }
     .responses--text:before {
