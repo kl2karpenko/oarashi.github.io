@@ -6,13 +6,6 @@
     background-color: #fff;
     min-width: 320px;
 }
-.container {
-    display: block;
-    position: relative;
-    margin: 0 auto;
-    padding: 0 5px;
-    height: 100%;
-}
 .cb {
     clear: both;
     }
@@ -27,6 +20,7 @@ h5 {
     font-size: 15px;
     line-height: 42px;
     text-transform: uppercase;
+    width: 181px;
     margin: 0 auto;
 }
 
@@ -45,15 +39,9 @@ h5 {
 }
 .bottom-block--button {
     background-color: #e74c3c;
-    display: block;
     color: #fff;
     text-decoration: none;
 
-}
-.bottom-block--img {
-    position: absolute;
-    bottom: 0;
-    right: 0;
 }
 .footer {
     background-color: #3498db;
