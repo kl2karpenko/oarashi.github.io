@@ -1,0 +1,10 @@
+.main {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+.main div {
+    min-width: 100px;
+    min-height: 100px;
+    background-color: aqua;
+}
