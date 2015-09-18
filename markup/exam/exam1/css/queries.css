@@ -299,6 +299,8 @@
     .header-top--logo {
         float: left;
         margin: 30px 20px;
+        font-size: 26px;
+        line-height: 42px;
     }
     .header-top--social {
         float: right;
@@ -438,10 +440,7 @@
     }
     .benefits-block--link {
         margin: 60px 0;
-    }
-    .benefits-block--link:hover {
-        background-color: #c0c0c0;
-        color: #fff;
+        cursor: pointer;
     }
     .responses {
         padding-bottom: 30px;
