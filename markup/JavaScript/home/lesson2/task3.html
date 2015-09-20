@@ -7,17 +7,26 @@
         var user;
         var password;
 
-        user = prompt('Введите логин','введите свой логин');
+        user = prompt('Введите логин');
 
-        if (user=='admin') {password = prompt('Введите пароль','введите свой пароль')}
-        else if (user==false) {alert('Canceled')}
-        else {alert('Access denied')}
+        if (user=='admin') {
+            password = prompt('Введите пароль');
+            if (password=='passw0rd') {
+                alert('Welcome home');
+            }
+            else {
+                alert('Wrong password');}
+            }
 
-        if (password=='passw0rd') {alert('Welcome home')}
-        else {alert('Wrong password')}
+        else if (user==null) {
+            alert('Canceled');
+        }
+
+        else {
+            alert('Access denied');
+        }
     </script>
 </head>
 <body>
-
 </body>
 </html>

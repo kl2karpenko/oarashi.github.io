@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <title>Document</title>
     <script>
-        var year = prompt('Какой сейчас год?', 'введите год цифрами');
-        if (year=='2015') {alert('Вы правы!')}
-        else {alert('С луны свалился? 2015!')};
+        var year = +prompt('Какой сейчас год?');
+        if (year==2015) {alert('Вы правы!' + year)}
+        else {alert('С луны свалился? 2015!' + year)};
     </script>
 </head>
 <body>
