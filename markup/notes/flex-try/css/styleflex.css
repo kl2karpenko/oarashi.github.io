@@ -1,97 +1,60 @@
-/*CSS RESET*/
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, font, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	outline: 0;
-	font-weight: inherit;
-	font-style: inherit;
-	font-size: 100%;
-	font-family: inherit;
-	vertical-align: baseline;
+.page {
+    background: #fefefe;
+    margin: 0;
+    padding: 0;
+    font:1em/1.3em Arial, Tahoma, "Trebuchet MS", sans-serif;
+    color: #272727;
 }
-/* remember to define focus styles! */
-:focus {
-	outline: 0;
-}
-body {
-	line-height: 1;
-	color: black;
-	background: white;
-}
-ol, ul {
-	list-style: none;
-}
-table {
-	border-collapse: separate;
-	border-spacing: 0;
-}
-caption, th, td {
-	text-align: left;
-	font-weight: normal;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: "";
-}
-blockquote, q {
-	quotes: "" "";
-}
-/* --END OF CSS-RESET--*/
-
-body {
-    font: 24px tahoma sans-serif;
-}
-.blue {
-    color: blue;
-}
-.orange {
-    color: orange;
-}
-.upper {
-    text-transform: uppercase;
-}
-.ital {
-    font-style: italic;
-}
-h1 {
-    font-size: 32px;
-}
-header {
+.main {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    padding: 20px 5% 20px 0;
-}
-.navi a {
-    text-decoration: none;
-    position: relative;
-    bottom: -20px;
-    padding: 13px 0;
-    text-transform: uppercase;
-    color: gray;
-    font-size: 16px;
-}
-.navi a:hover {
- border-bottom: 2px solid;
-    color: blue;
-}
-.banner {
-    background: url(../img/fon-banner.png);
-    display: flex;
-    flex-flow: row wrap;
+    max-width: 100%;
+    margin: 20px auto;
     justify-content: center;
-    color: #fff;
-    padding: 5%;
+    align-items: stretch;
+    align-content: stretch;
+    flex-flow: row wrap;
 }
-.banner-container {
-    width: 800px;
+.bl {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    margin: 20px;
+    flex: 1 1 300px;
     text-align: center;
+    display: flex;
+    flex-flow: row wrap;
 }
+.bl--image {
+    margin: 10px;
+    flex: 1 1 200px;
+}
+.bl--image__picture {
+    width: 100px;
+    height: auto;
+}
+.bl--heading {
+    color: #406cd0;
+    margin: 0 10px 0 0;
+    font-size: 1.1em;
+}
+.bl--text {
+    margin: 10px;
+    flex: 1 1 250px;
+}
+.bl--button {
+    background: #406cd0;
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 2px;
+    transform: 0.3s;
+}
+.bl--button:hover {
+    background: #c70000;
+}
+.fl1 {}
+.fl2 {}
+.fl3 {}
