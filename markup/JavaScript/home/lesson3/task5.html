@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+
+        var result = '';
+
+        function getChessBoard () {
+
+            for (var j=0; j<8; j++) {
+
+                for (var i=0; i<8; i++) {
+
+                    result += ((i+j)%2) ? ' ' : '#';
+        }
+
+    result += '\n';
+
+    }
+
+  return console.log (result);
+
+}
+
+        getChessBoard();
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

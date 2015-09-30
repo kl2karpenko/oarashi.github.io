@@ -2,26 +2,45 @@
     background-color: #3498db;
     color: #fff;
     display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
-    padding: 0 20px;
+    flex-flow: row wrap;
+    justify-content: center;
+    padding: 10px 20px;
 }
-h1 {
-    display: inline-flex;
-    text-transform: uppercase;
+.logo {
+    display: flex;
+    align-items: center;
+    flex: 1 1 350px;
 }
+@media screen and (min-width:320px) and (max-width:550px){ .logo{justify-content: center;} }
 .logo--img {
     vertical-align: middle;
+    margin: 0 10px 0 0;
+}
+.logo--heading {
+    color: #ffffff;
+        font-size: 21px;
+        font-weight: 700;
+        text-transform: uppercase;
 }
 .social {
-    display: inline-flex;
+    display: flex;
     align-self: center;
+    justify-content: flex-end;
+}
+.social--text {
+    text-transform: capitalize;
+    align-self:center;
+    margin: 0 10px 0 0;
+}
+.social--link {
+    margin: 0 4px;
+    display: inline-flex;
 }
 .header-middle {
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
-    background: url(../img/fon1.png) no-repeat;
+    background: url(../img/fon1.png) no-repeat 50% 25%;
     background-size:100% 100%;
     color: #fff;
     min-height: 250px;
@@ -29,7 +48,8 @@ h1 {
 }
 .header-middle--heading {
     text-transform: uppercase;
-    width: 250px;
+    font-size: 50px;
+    margin: 10px 0;
 }
 .header-middle--text {
     width: 350px;
@@ -40,32 +60,38 @@ h1 {
     background-color: #f2f2f2;
     padding: 0 20px;
 }
+.header-bottom--heading {
+    text-transform: uppercase;
+}
+.header-bottom--text {
+    margin: 10px 0;
+}
 .advances {
     display: flex;
     flex-flow: column nowrap;
 }
 .advances--heading {
-    text-transform: uppercase;
     color: #3498db;
-    font-size: 32px;
+    font-size: 20px;
+    line-height: 42px;
+    text-transform: uppercase;
     margin: 20px;
 }
 .advances-blocks {
     display: flex;
-    margin: 20px auto;
+    margin: 10px auto;
     justify-content: center;
     flex-flow: row wrap;
 }
 .advances-block {
     margin: 20px;
-    border: 1px solid #666;
     display: flex;
     flex-flow: row wrap;
     flex: 1 1 250px;
     text-align: center;
 }
 /*MEDIA QUERY for blocks better moves */
-@media only screen and (min-width: 500px) and (max-width:1000px){ .advances-block {flex: 1 1 550px;} }
+-@media only screen and (min-width: 320px) and (max-width:1000px){ .advances-block {flex: 1 1 450px;} }
 /* END of MEDIA QUERI */
 
 .advances-block--img {
@@ -73,8 +99,8 @@ h1 {
     flex: 1 1 300px;
 }
 .advances-block--img__pic {
-    width: 250px;
-    height: auto;
+    width: 290px;
+    height: 159px;
 }
 .advances-block--text {
     margin: 10px;
@@ -84,6 +110,8 @@ h1 {
     color: #406cd0;
     margin: 0 10px 0 0;
     font-size: 14px;
+    text-transform: uppercase;
+    margin: 20px;
 }
 .advances-block--text__text {
 
@@ -93,4 +121,90 @@ h1 {
 }
 .advances-block--text__link:hover {
 
+}
+.responces {
+    display: flex;
+    flex-flow: column wrap;
+    margin: 20px;
+    padding: 20px;
+}
+.responces-first-line {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+.responces--heading {
+    color: #3498db;
+    font-size: 20px;
+    line-height: 42px;
+    text-transform: uppercase;
+    margin: 20px 0;
+}
+.responces--slider {
+
+}
+.responces--slider__item {
+    text-decoration: none;
+    color: #000;
+    background-color: #dedede;
+    font-size: 32px;
+    border-radius: 50%;
+    padding: 0 10px;
+    transition-duration: 0.5s;
+}
+.responces--slider__item:hover {
+    background-color: aqua;
+    color: #fff;
+}
+.responces--text {
+    width: 550px;
+
+}
+.bottom-block {
+    display: flex;
+    flex-flow: row nowrap;
+    padding: 0 20px;
+    background-color: antiquewhite
+
+}
+.bottom-block--img {
+
+}
+.bottom-block--button {
+    margin: auto;
+}
+.footer {
+    background-color: #3498db;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    color: #fff;
+}
+.footer-logo {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    margin-left: 20px;
+
+}
+.footer-logo--img {
+
+}
+.footer-logo--text {
+    text-transform: uppercase;
+    flex: 1 1 100px;
+}
+
+.right-column {
+    margin: 20px;
+}
+.footer--social {
+    display: flex;
+}
+.footer--social__text {
+    text-transform: capitalize;
+    margin-right: 10px;
+}
+.footer--social__link {
+    margin: 0 4px;
 }

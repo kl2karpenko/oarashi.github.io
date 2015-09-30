@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+
+        function getSimple (a,b) {
+
+            step:
+            for (var i = a; i<=b; i++) {
+
+                for (var t = a; t<i; t++) {
+
+                    if (i%t == 0) continue step
+                }
+                    console.log(i);
+            }
+        }
+
+        getSimple(2,18);
+
+        </script>
+</head>
+<body>
+
+</body>
+</html>
