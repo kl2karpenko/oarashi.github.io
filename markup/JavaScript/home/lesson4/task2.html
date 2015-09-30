@@ -9,14 +9,14 @@
 
             lowerCase = str.toLowerCase();
 
-            spamCheck = (lowerCase.indexOf("sex") &&  lowerCase.indexOf("spam") );
+            spamCheck = (lowerCase.indexOf("sex") !==-1 || lowerCase.indexOf("spam") !==-1 );
 
-            if (spamCheck !== 0) console.log("Find");
+            if (spamCheck) console.log("Find");
 
             else console.log("Don't have");
         }
 
-        checkSpan('Hi MY sex NAME is!');
+        checkSpan('Hi spam MY NAME is!');
 
     </script>
 

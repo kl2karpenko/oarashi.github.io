@@ -5,12 +5,16 @@
     <title>Document</title>
     <script>
 
-        function pow (a,b) {
-            var i = Math.pow(a,b)
-            return console.log(i);
+        function pow(a,b) {
+            result = 1;
+            for (i = 1; i<=b; i++) {
+                result = result*a;
+            }
+            /*var i = Math.pow(a,b)*/
+            return console.log(result);
         }
 
-        pow(2,4);
+        pow(2,6);
     </script>
 </head>
 <body>
