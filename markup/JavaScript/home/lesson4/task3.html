@@ -5,19 +5,14 @@
     <title>Task1</title>
     <script>
 
-    function checkSpan(str) {
+    function getShortString(str) {
+        var i = str.substring(0,10);
+        i = i+'...';
+        return console.log(i);
 
-            lowerCase = str.toLowerCase();
+    }
 
-            spamCheck = (lowerCase.indexOf("sex") !==-1 || lowerCase.indexOf("spam") !==-1 );
-
-            if (spamCheck) console.log("Find");
-
-            else console.log("Don't have");
-        }
-
-        checkSpan('Hi spam MY NAME is!');
-
+        getShortString('Hello world its me gain and i want to tell you something')
     </script>
 
 
