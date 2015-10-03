@@ -2,18 +2,22 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Task1</title>
+    <title>Task3</title>
     <script>
+//creating empty array
 
-        var sumOfArr = [];
+var sumOfArr = [];
 
+//start loop to insert users data
 while (true) {
 
     var numbers = prompt('Введите число','');
-
+//stop operation if user inserted string or canceled operation
     if ( numbers === null || isNaN(numbers) || numbers === "" ) break;
+//input users data into array
     sumOfArr.push(+numbers);
 }
+//loop that pluses each value
         var result = 0;
         for (var i = 0; i < sumOfArr.length; i++) {
          result += sumOfArr[i];
