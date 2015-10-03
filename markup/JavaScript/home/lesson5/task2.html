@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task1</title>
+    <script>
+//check if the item of object is number
+function isNumeric(n) {
+    return !isNaN(parseFloat(n)) && isFinite(n)
+}
+//input data
+  var menu = {
+  width: 200,
+  height: 300,
+  title: "My menu"
+};
+
+//function that doubles numbers in object
+function multiplyNumeric(obj) {
+    for (key in obj) {
+        if ( isNumeric(obj[key]) ) {
+            obj[key]*=2;
+        }
+    }
+return console.log(obj);
+}
+
+//Run function
+        multiplyNumeric(menu);
+
+    </script>
+</head>
+<body>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task1</title>
+    <script>
+
+        var sumOfArr = [];
+
+while (true) {
+
+    var numbers = prompt('Введите число','');
+
+    if ( numbers === null || isNaN(numbers) || numbers === "" ) break;
+    sumOfArr.push(+numbers);
+}
+        var result = 0;
+        for (var i = 0; i < sumOfArr.length; i++) {
+         result += sumOfArr[i];
+        }
+
+        alert(result);
+
+    </script>
+
+
+</head>
+<body>
+
+</body>
+</html>

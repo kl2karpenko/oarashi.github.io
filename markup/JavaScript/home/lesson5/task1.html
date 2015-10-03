@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task1</title>
+    <script>
+
+//input data
+var tasksCompleted = {
+  'Anna': 29,
+  'Serg': 35,
+  'Elena': 1,
+  'Anton': 99
+};
+
+// setting veriables
+var i = 0;
+var bestWorker;
+
+//checking all items in object
+for (var item in tasksCompleted) {
+//if 'i' smaller than [item] in {object}
+  if (i < tasksCompleted[item]) {
+// value of [item] will rewrite the value of 'i'
+    i = tasksCompleted[item];
+//bestWorker is a name of the highest value in {object}
+      bestWorker = item;
+  }
+}
+
+console.log( bestWorker || "Error. Check out your form" );
+
+    </script>
+
+
+</head>
+<body>
+
+</body>
+</html>
