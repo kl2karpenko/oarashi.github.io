@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>task1</title>
+
+    <script>
+
+var obj = {
+className : 'my menu open menu very fast'
+};
+//
+function removeClass (obj,cls) {
+//creating ve
+    var newObj = [];
+
+    var arr = obj.className.split(' ')
+//
+        for (var i = 0; i<arr.length; i++) {
+
+        if (arr[i] !== cls) {
+            newObj.push(arr[i]);
+        }
+
+    }
+//
+        obj.className = newObj.join(', ');
+        console.log( obj.className )
+    }
+//
+    removeClass(obj,'menu');
+    </script>
+
+</head>
+<body>
+
+</body>
+</html>

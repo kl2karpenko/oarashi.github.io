@@ -3,22 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
-<script>
+    <script>
 
-/*
-function sayHello( name, city, state ) {
+    var a = {
+        name : 'sergey',
+        age : '30',
+        hobby : 'music',
+    }
 
-    return 'Hello,' + ' ' + name.join(' ') + '!' + ' ' + 'Welcome to' + ' ' + city + ', ' + state + '!';
-}
-     console.log(sayHello(['John', 'Smith'], 'Phoenix', 'Arisona'));
-*/
-/*
-function include(arr, item){
-  item.include?(arr);
-}
-*/
-var numbers = [1, 0, 3, 2, 5, 4, 7, 6, 9, 8];
-if numbers.include?(5) {alert('yes')}
+
+
+    for (var key in a) {
+        b = Number(a[key]);
+        {console.log(typeof(a[key]));
+        console.log(a[key])
+        console.log(b);
+        }
+
+    }
+
+
+
+
+
 
 </script>
 </head>

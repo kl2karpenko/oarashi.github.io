@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>task7</title>
+
+    <script>
+var arr = ['воз', 'киборг', 'корсет', 'ЗОВ', 'гробик', 'костер', 'сектор'];
+
+function anClean(arr) {
+    var firstArr = [];
+    var secondArr = [];
+    var cleanArr = [];
+//
+    for (var i = 0; i<arr.length; i++) {
+        var sortedLettersOfArr = arr[i].toLowerCase().split('').sort().join('');
+        firstArr.push(sortedLettersOfArr)
+        secondArr.push(sortedLettersOfArr)
+    }
+
+
+
+
+
+}
+
+    console.log( anClean(arr) )
+
+    </script>
+
+</head>
+<body>
+
+</body>
+</html>

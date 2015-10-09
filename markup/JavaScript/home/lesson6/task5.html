@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>task5</title>
+
+    <script>
+function isPal(string) {
+//veriables
+    var originLowerCase = string.replace(/\s+/g, '').toLowerCase();
+    var lowerCase = string.replace(/\s+/g, '').toLowerCase().split('').reverse().join('');
+//condition
+if  (lowerCase == originLowerCase) return true;
+    else return false;
+}
+
+//testing
+        console.log(isPal('Anna'));
+        console.log(isPal('А роза упала на лапу Азора'));
+        console.log(isPal('Вася'));
+        console.log(isPal('12321'));
+        console.log(isPal('123212'));
+    </script>
+
+</head>
+<body>
+
+</body>
+</html>

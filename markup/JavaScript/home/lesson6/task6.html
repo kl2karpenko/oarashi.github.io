@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>task6</title>
+
+    <script>
+//
+var strings = ['кришна','кришна','харе','харе','харе','харе','кришна','кришна','8-()'];
+//
+function unique(arr) {
+    var uniqueStr = [];
+
+stepOne:
+    for (i=0; i<arr.length;i++) {
+//
+        for (var a = 0; a<uniqueStr.length;a++) {
+            if (arr[i] == uniqueStr[a]) continue stepOne;
+        }
+//
+        uniqueStr.push(arr[i]);
+    }
+    console.log(uniqueStr);
+}
+        unique(strings);
+
+    </script>
+
+</head>
+<body>
+
+</body>
+</html>

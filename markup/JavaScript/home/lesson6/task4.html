@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>task4</title>
+
+    <script>
+//seting veriables
+var vasya = { name: 'Вася', age: 23 };
+var masha = { name: 'Маша', age: 18 };
+var vovochka = { name: 'Вовочка', age: 6 };
+var people = [vasya, masha, vovochka];
+//sorting array by age
+function sortByAge (a,b) {
+    return a.age-b.age;
+}
+//start sorting
+   people.sort(sortByAge);
+//
+    console.log(people[0].age);
+    </script>
+
+</head>
+<body>
+
+</body>
+</html>
