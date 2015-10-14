@@ -5,23 +5,18 @@
     <title>Document</title>
 
     <script>
-    var result = [];
-    var a = [[1,2,3],['one',2,'two','thee']];
-        var firstarr = a[0];
-        var seconarr = a[1];
-        //
-        for (var i = 0; i<firstarr.length; i++) {
-            for(var j = 0; j<seconarr.length; j++) {
-                if (firstarr[i]== seconarr[j]) {
 
-                    result.push(firstarr[i]);
-                }
-            }
+    var a = {
+    aaa : [1],
+    bbb : [2]
+    };
+    var b = ['1','2']
 
-        }
+    a.aaa.push(b[0]);
 
-       console.log(result);
 
+
+    console.log(a)
 
     </script>
 

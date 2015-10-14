@@ -1,0 +1,62 @@
+
+.portfolio-wrapper {
+    padding: 55px 0 0 0;
+    margin: 0;
+    text-align: center;
+}
+.portfolio-item {
+    list-style: none;
+    width: 380px;
+    height: 280px;
+    margin: 0;
+    text-align: center;
+}
+.portfolio-item:hover {
+    cursor: pointer;
+}
+
+.img-effect {
+    -webkit-transition: all 0.8s ease;
+    -moz-transition: all 0.8s ease;
+    -o-transition: all 0.8s ease;
+    -ms-transition: all 0.8s ease;
+    transition: all 0.8s ease;
+}
+ 
+.img-effect:hover {
+    -webkit-filter: grayscale(100%);
+}
+
+.portfolio-img {
+    width: 400px;
+    height: 300px;
+    cursor: pointer;
+}
+
+/* If img will be insert like background-images
+
+.portfolio-image-1 {
+    background-image: url(../img/site2.jpg);
+    background-size: 100%;
+}
+.portfolio-image-2 {
+    background-image: url(../img/site1.jpg);
+    background-size: 100%;
+}
+.portfolio-image-3 {
+    background-image: url(../img/site3.jpg);
+    background-size: 100%;
+}
+.portfolio-image-4 {
+    background-image: url(../img/site4.png);
+    background-size: 100%;
+}
+.portfolio-image-5 {
+    background-image: url(../img/site5.jpg);
+    background-size: 100%;
+}
+.portfolio-image-6 {
+    background-image: url(../img/site6.jpg);
+    background-size: 100%;
+}
+*/
