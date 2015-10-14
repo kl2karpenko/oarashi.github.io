@@ -22,7 +22,7 @@
     -ms-transition: all 0.8s ease;
     transition: all 0.8s ease;
 }
- 
+
 .img-effect:hover {
     -webkit-filter: grayscale(100%);
 }
