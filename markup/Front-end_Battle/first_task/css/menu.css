@@ -1,6 +1,45 @@
 .navbar {
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(48, 30, 19, 0.85);
 }
+.navbar-header {
+    background-image: url(../img/sprite.png);
+    width: 190px;
+    height: 60px;
+    overflow: hidden;
+    background-size: 845px;
+    background-position: -89px -10px;
+    cursor: pointer;
+}
+
+.menu-item-1 {
+    background-image: url(../img/sprite.png);
+    width: 100px;
+    height: 55px;
+    overflow: hidden;
+    background-size: 845px;
+    background-position: -470px -3px;
+}
+.menu-item-2 {
+    background-image: url(../img/sprite.png);
+    width: 100px;
+    height: 55px;
+    overflow: hidden;
+    background-size: 845px;
+    background-position: -575px -3px;
+}
+.menu-item-3 {
+    background-image: url(../img/sprite.png);
+    width: 100px;
+    height: 55px;
+    overflow: hidden;
+    background-size: 845px;
+    background-position: -675px -3px;
+}
+
+
+
+
+
 
 .menu-item:hover,
 .menu-item:focus,
