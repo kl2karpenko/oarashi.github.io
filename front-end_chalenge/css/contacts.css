@@ -1,0 +1,16 @@
+.form-name
+{
+    margin: 20px 0;
+}
+
+textarea.form-control
+{
+    height: 80px;
+
+    resize: none;
+}
+
+.form-control
+{
+    height: 40px;
+}
