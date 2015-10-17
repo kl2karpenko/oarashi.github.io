@@ -4369,7 +4369,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   }
 }
 .navbar-nav {
-  margin: 7.5px -15px;
+    margin: 25px -15px 0 -15px;
+    text-align: center;
 }
 .navbar-nav > li > a {
   padding-top: 10px;

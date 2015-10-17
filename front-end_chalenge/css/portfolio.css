@@ -14,7 +14,7 @@
     text-align: center;
     color: #fff;
     opacity: 0;
-    background: rgba(240,95,64,.9);
+    background: rgba(48, 30, 19, 0.8);
     -webkit-transition: all .35s;
     -moz-transition: all .35s;
     transition: all .35s;
@@ -31,7 +31,7 @@
 .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category,
 .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
     padding: 0 15px;
-    font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
+    font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
 }
 
 .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category {
@@ -52,11 +52,12 @@
     .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category {
         font-size: 16px;
     }
-
     .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
         font-size: 22px;
     }
 }
-#portfolio .col-lg-4, #portfolio .col-sm-6{
+
+#portfolio .col-lg-4,
+#portfolio .col-sm-6 {
     padding: 0;
 }

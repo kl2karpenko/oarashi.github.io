@@ -1,0 +1,42 @@
+@media(max-width: 767px) {
+    .navbar-fixed-top {
+        padding: 10px 0;
+    }
+
+    .header {
+        height: 466px;
+
+    }
+
+    .header__content {
+        padding-top: 150px;
+        height: 266px;
+
+    }
+
+    .section__video {
+        height: 466px;
+
+    }
+
+    .video-main {
+        min-height: 466px;
+        display: none;
+    }
+
+    .video__case {
+        height: 466px;
+        background-color: #adadad;
+    }
+
+    .form-control {
+        height: 30px;
+    }
+
+    .btn-outline {
+        line-height: 30px;
+        width: 35px;
+        height: 35px;
+        font-size: 15px;
+    }
+}

@@ -13,7 +13,8 @@ function anClean( arr ) {
 
   for (var i = 0; i < arr.length; i++) {
     var index = arr[i].toLowerCase().split('').sort().join('');
-
+      console.log(arr[i])
+      console.log([arr[i]])
     if ( index in store ) {
 
         store[index].push( arr[i] );

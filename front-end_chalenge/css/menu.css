@@ -7,6 +7,18 @@
     position: absolute;
     top: -15px;
     left: 25px;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    -webkit-transition-property: -webkit-transform;
+    transition-property: transform;
+}
+.navbar-brand:hover {
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+    animation-timing-function: linear;
+    animation-duration: 1s;
+
 }
 .navbar-fixed-top {
     padding: 40px 0;
@@ -21,10 +33,9 @@
 }
 .menu-item {
     color: rgb(0, 228, 255) !important;
+    font-size: 31px;
 }
-.menu-item:hover,
-.menu-item:focus,
-.menu-item:active {
+.menu-item:hover {
     color: #fff !important;
     display: inline-block;
     -webkit-animation-name: menu-pulse;

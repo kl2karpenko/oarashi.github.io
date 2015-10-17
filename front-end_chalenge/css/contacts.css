@@ -1,16 +1,20 @@
-.form-name
-{
+#contactForm {
+    padding: 0 0 20px 0;
+}
+.form-name {
     margin: 20px 0;
 }
 
-textarea.form-control
-{
+textarea.form-control {
     height: 80px;
-
     resize: none;
 }
 
-.form-control
-{
+.form-control {
     height: 40px;
+}
+.btn-success {
+    display: block;
+    width: 200px;
+    margin: 0 auto;
 }
