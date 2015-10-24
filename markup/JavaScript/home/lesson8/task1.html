@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task1</title>
+
+    <script>
+
+    var ladder = {
+    step : 0,
+    up : function() {
+        this.step++
+        return this;
+                    },
+    down : function() {
+        this.step--;
+        return this;
+                       },
+        showStep: function (){
+            alert( this.step );
+        }
+    }
+
+    ladder.up().up().down().up().down().showStep();
+
+    console.log(ladder)
+
+    </script>
+
+
+</head>
+<body>
+
+</body>
+</html>

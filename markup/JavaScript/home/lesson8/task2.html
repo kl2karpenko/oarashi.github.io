@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Task2</title>
+
+    <script>
+        function Calculator() {
+
+            var methods = {
+                "-": function (a, b) {
+                    return a - b;
+                },
+                "+": function (a, b) {
+                    return a + b;
+                }
+            };
+
+            this.calculate = function (str) {
+
+                var split = str.split(' '),
+                    a = +split[0],
+                    op = split[1],
+                    b = +split[2]
+
+                if (!methods[op] || isNaN(a) || isNaN(b)) {
+                    return NaN;
+                }
+
+                return methods[op](+a, +b);
+
+            }
+SyntaxError
+            this.addMethod = function (name, func) {
+                methods[name] = func;
+            };
+        }
+        var calk = new Calculator();
+
+
+        var powerCalc = new Calculator();
+        powerCalc.addMethod("*", function (a, b) {
+            return a * b;
+        });
+
+        console.log(powerCalc.calculate('10 * 2'))
+
+
+
+
+
+
+
+
+        /*function Calculator() {
+            var operations = {
+                '+': function (a, b) {
+                    return a + b;
+                },
+                '-': function (a, b) {
+                    return a - b;
+                }
+            }
+            this.calculate = function (str) {
+                var arr = str.split(' ');
+                var a = +arr[0];
+                var b = +arr[2];
+                var operand = arr[1];
+                console.log(operand);
+                console.log(operations[operand](a,b));
+
+            }
+
+        }
+
+        var calc = new Calculator;
+        console.log(calc.calculate('10 - 2'))*/
+    </script>
+
+
+</head>
+
+<body>
+
+</body>
+
+</html>

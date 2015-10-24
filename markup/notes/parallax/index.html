@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/mouseparallax.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="js/mouse.parallax.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div id="background" class="mouse-bg"></div>
+
+        <div id="foreground" class="mouse-bg"></div>
+
+        <div id="fore-foreground" class="mouse-bg"></div>
+
+        <div id="fore-fore-foreground" class="mouse-bg"></div>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+
+            $('#background').mouseParallax({
+                moveFactor: 5
+            });
+
+            $('#foreground').mouseParallax({
+                moveFactor: 10
+            });
+
+            $('#fore-foreground').mouseParallax({
+                moveFactor: 15
+            });
+
+            $('#fore-fore-foreground').mouseParallax({
+                moveFactor: 20
+            });
+
+
+
+            $('body').height(3000);
+
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+#slidebox{
+    width: 400px;
+    height: 100px;
+    padding: 10px;
+    background-color: #fff;
+    border-top: 3px solid #323232;
+    position: fixed;
+    bottom: 0px;
+    right: -430px;
+    -moz-box-shadow: -2px 0px 5px #aaa;
+    -webkit-box-shadow: -2px 0px 5px #aaa;
+    box-shadow: -2px 0px 5px #aaa;
+}
+#slidebox p, a.more{
+    font-size: 11px;
+    text-transform: uppercase;
+    font-family: Arial,Helvetica,sans-serif;
+    letter-spacing: 1px;
+    color: #555;
+    margin: 0;
+}
+a.more{
+    cursor: pointer;
+    color: #323232;
+    float: right;
+}
+a.more:hover{
+    text-decoration:underline;
+}
+#slidebox h2{
+    color: #536482;
+    font-size: 16px;
+    margin: 10px 20px 5px 0px;
+    font-style: normal;
+    font-weight: normal;
+}
+a.close{
+    background: transparent url("http://cabinetadmina.ru/storage/up_4admins_ru/images/close.gif") no-repeat top left;
+    width: 13px;
+    height: 13px;
+    position: absolute;
+    cursor: pointer;
+    top: 10px;
+    right: 10px;
+}
