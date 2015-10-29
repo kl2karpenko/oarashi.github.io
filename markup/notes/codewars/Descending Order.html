@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Task8</title>
+
+    <script>
+        function descendingOrder(n) {
+            var a = n + '';
+            return +a.split('').sort(function (a, b) {
+                return b - a
+            }).join('');
+        }
+
+        console.log(descendingOrder(123456789));
+        console.log(descendingOrder(1));
+    </script>
+
+
+
+
+</head>
+
+<body>
+
+</body>
+
+</html>

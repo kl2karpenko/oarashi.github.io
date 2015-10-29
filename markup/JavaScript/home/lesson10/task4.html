@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Task3</title>
+
+    <script>
+        function makeFirstLetterUpperCase(str) {
+            arr = str.split(' ');
+
+            for (var i = 0; i < arr.length; i++) {
+                var capitalize = arr[i].charAt(0).toUpperCase() + arr[i].slice(1);
+                arr[i] = capitalize;
+            }
+
+            return arr.join(' ');
+        }
+
+        console.log(makeFirstLetterUpperCase('the quick brown fox'));
+    </script>
+
+
+
+
+</head>
+
+<body>
+
+</body>
+
+</html>

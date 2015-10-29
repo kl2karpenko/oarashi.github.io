@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Task5</title>
+
+    <script>
+
+        function getLongestWord(str) {
+            var arr = str.split(' ').sort(function (a, b) {
+                return b.length - a.length;
+            })
+            return arr[0];
+        }
+
+        console.log(getLongestWord('Web Development Tutorial'));
+    </script>
+
+
+
+
+</head>
+
+<body>
+
+</body>
+
+</html>

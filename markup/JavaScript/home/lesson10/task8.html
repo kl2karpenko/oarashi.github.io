@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Task8</title>
+
+    <script>
+
+        var arr = ['link', 'menu', 'menu__item', 'menu__item', 'header', 'link', 'footer', 'sidebar', 'link'];
+
+        function countClassNameInString(arr) {
+            var obj = {};
+            for (var i = 0; i < arr.length; i++) {
+                if (arr[i] in obj) {
+                    obj[arr[i]] = obj[arr[i]] + 1;
+                } else {
+                    obj[arr[i]] = 1;
+                }
+            }
+
+            return obj;
+        }
+
+        function getMostUseClass(arr) {
+
+            var objClass = countClassNameInString(arr);
+
+            return Object.keys(objClass).sort(function (a, b) {
+                return objClass[b] - objClass[a];
+            });
+        }
+
+        console.log(getMostUseClass(arr));
+
+    </script>
+
+
+
+
+</head>
+
+<body>
+
+</body>
+
+</html>

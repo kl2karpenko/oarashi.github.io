@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Task1</title>
+
+    <script>
+        var obj = {
+            person1Age: 20,
+            person1Name: 'Ivanov',
+            person2Age: 30,
+            person2Name: 'Petrov',
+            person3Age: 40,
+            person3Name: 'Sidorov'
+        };
+
+        function extractNumbers(obj) {
+            var arr = [];
+
+            for (var key in obj) {
+                if (typeof obj[key] == 'number') {
+                    arr.push(obj[key]);
+                }
+            }
+
+            return arr;
+        }
+
+        function extractString(obj) {
+            var arr = [];
+
+            for (var key in obj) {
+                if (typeof obj[key] == 'string') {
+                    arr.push(obj[key]);
+                }
+            }
+
+            return arr;
+        }
+
+
+        console.log(extractNumbers(obj));
+        console.log(extractString(obj));
+    </script>
+
+
+
+
+</head>
+
+<body>
+
+</body>
+
+</html>
