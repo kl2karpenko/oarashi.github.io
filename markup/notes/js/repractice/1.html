@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        var obj = {
+            className: 'open menu'
+        };
+
+        function removeClass(obj, cls) {
+            var newObj = [];
+            var arr = obj.className.split(' ');
+
+            for (var i = 0; i < arr.length; i++) {
+                if (arr[i] !== cls) {
+
+                    newObj.push(arr[i]);
+                }
+
+            }
+            return obj.className = newObj.join(', ');
+
+        };
+
+        console.log(removeClass(obj, 'open'));
+
+
+        /*var arr = ['HTML', 'JavaScript', 'CSS'];
+        var arrSorted = arr.slice(0).sort();
+        console.log(arrSorted);*/
+
+        ////////
+
+        /* var arr = [1, 2, 3, 4, 5];
+
+         arr.sort(function (a, b) {
+             return Math.random() - 0.5;
+         });
+
+         console.log(arr);*/
+
+        //////////
+
+        var vasya = {
+            name: 'Вася',
+            age: 23
+        };
+        var masha = {
+            name: 'Маша',
+            age: 18
+        };
+        var vovochka = {
+            name: 'Вовочка',
+            age: 6
+        };
+
+        /////
+
+        var people = [vasya, masha, vovochka];
+
+        people.sort(function (a, b) {
+            return a.age - b.age;
+        })
+        console.log(people[0].age)
+
+
+        function isPal(string) {
+            var arr = string.toLocaleLowerCase();
+            var revArr = string.toLowerCase().split('').reverse().join('');
+            if (arr == revArr) {
+                return console.log(true)
+            };
+            return console.log(false);
+
+        }
+
+        isPal('AddA');
+
+
+
+        var strings = ['кришна', 'кришна', 'харе', 'харе', 'харе', 'харе', 'кришна', 'кришна', '8-()'];
+
+        function unique(arr) {
+            var uniqArr = [];
+
+            for (var i = 0; i < arr.length; i++) {
+                for (var j = 0; j<arr.length+1; j++) {
+
+                    if (arr[i] == )
+                }
+                }
+
+            }
+
+
+        unique(strings);
+    </script>
+
+
+
+
+</head>
+
+<body>
+
+</body>
+
+</html>
