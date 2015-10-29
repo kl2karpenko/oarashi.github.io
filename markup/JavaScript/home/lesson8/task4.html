@@ -6,39 +6,28 @@
     <title>Task4</title>
 
     <script>
-        function User(fullName) {
-            this.fullName = fullName;
 
+        function Article() {
 
-            Object.defineProperty(this, 'firstName', {
-
-                get: function () {
-                    return this.fullName.split(' ')[0];
-                },
-                set: function (rewriteName) {
-                    this.firstName = rewriteName;
-                }
-            });
-
-            Object.defineProperty(this, 'lastName', {
-                get: function () {
-                    return this.fullName.split(' ')[1];
-                },
-                set: function (rewriteLastName) {
-                    this.fullName = this.firstName + ' ' + rewriteLastName;
-                }
-            });
-
-
+            this.created = new Date;
+            Article.last = this.created;
+            Article.count++;
         }
 
-        var vasya = new User('Sasha Pushkin');
-        var petya = new User('sasa hasa');
-        vasya.lastName = 'Толстой';
+        Article.count = 0;
 
-        console.log(vasya.firstName);
-        console.log(vasya.lastName);
-        console.log(vasya)
+        Article.showStats = function () {
+            console.log('Всего: ' + this.count + ', Последняя: ' + this.last);
+        };
+
+        new Article();
+        new Article();
+
+        Article.showStats();
+
+        new Article();
+
+        Article.showStats();
     </script>
 
 

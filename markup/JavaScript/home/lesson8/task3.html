@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Task4</title>
+
+    <script>
+        function User(fullName) {
+            this.fullName = fullName;
+
+
+            Object.defineProperty(this, 'firstName', {
+
+                get: function () {
+                    return this.fullName.split(' ')[0];
+                },
+                set: function (rewriteName) {
+                    this.firstName = rewriteName;
+                }
+            });
+
+            Object.defineProperty(this, 'lastName', {
+                get: function () {
+                    return this.fullName.split(' ')[1];
+                },
+                set: function (rewriteLastName) {
+                    this.fullName = this.firstName + ' ' + rewriteLastName;
+                }
+            });
+
+
+        }
+
+        var vasya = new User('Sasha Pushkin');
+        var petya = new User('sasa hasa');
+        vasya.lastName = 'Толстой';
+
+        console.log(vasya.firstName);
+        console.log(vasya.lastName);
+        console.log(vasya)
+    </script>
+
+
+
+
+</head>
+
+<body>
+
+</body>
+
+</html>
