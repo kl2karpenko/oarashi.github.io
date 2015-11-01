@@ -20,21 +20,38 @@
 </head>
 
 <body>
-
     <nav class="navbar navbar-default navbar-fixed-top">
 
         <div class="container">
+
+            <div class="nav-bar-header">
+
+                <button type='button' class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                <a class="navbar-brand" href="#">Мой бюджет</a>
+
+            </div>
+
             <div class="navbar-collapse collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav nav-pills">
-                    <li class="active">
-                        <a href="#">Главная</a>
-                    </li>
+
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Главная</a></li>
                     <li><a href="#">Трансакции</a></li>
                     <li><a href="#">Бюджет</a></li>
                     <li><a href="#">Отчеты</a></li>
                     <li><a href="#">Счета</a></li>
                     <li><a href="#">Категории</a></li>
                 </ul>
+                <ul class="nav navbar-nav navbar-right col-sm-8 col-md-3">
+                    <li><a href="#"><span class="glyphicon glyphicon-user"></span> Авториация</a></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Выйти</a></li>
+                </ul>
+
             </div>
         </div>
     </nav>
@@ -42,87 +59,155 @@
     <section class="accounts">
         <container>
             <div class="row">
-                <div class="left-column col-md-6 col-lg-6">
+                <div class="balance left-column col-md-6 col-lg-6 text-center">
+                    <h3 class="text-center">Баланс</h3>
+
                     <div class="balance row">
-                        <div class="total_balance col-md-6 col-lg-6">
+                        <div class="total_balance col-xs-6 col-sm-6 col-md-6 col-lg-6">
                             <p>Текущий баланс</p>
                         </div>
-                        <div class="total_balance col-md-6 col-lg-6">
+                        <div class="total_balance col-xs-6 col-sm-6 col-md-6 col-lg-6">
                             <p>1000000 грн</p>
                         </div>
                     </div>
                     <div class="operations row">
-                        <div class="total_balance col-md-6 col-lg-6">
+                        <div class="total_balance col-xs-6 col-sm-6 col-md-6 col-lg-6">
                             <p>Счет 1</p>
                         </div>
-                        <div class="total_balance col-md-6 col-lg-6">
+                        <div class="total_balance col-xs-6 col-sm-6 col-md-6 col-lg-6">
                             <p>+100 грн</p>
                         </div>
-                        <div class="total_balance col-md-6 col-lg-6">
+                        <div class="total_balance col-xs-6 col-sm-6 col-md-6 col-lg-6">
                             <p>Счет 2</p>
                         </div>
-                        <div class="total_balance col-md-6 col-lg-6">
+                        <div class="total_balance col-xs-6 col-sm-6 col-md-6 col-lg-6">
                             <p>+200 грн</p>
                         </div>
-                        <div class="total_balance col-md-6 col-lg-6">
+                        <div class="total_balance col-xs-6 col-sm-6 col-md-6 col-lg-6">
                             <p>Счет 3</p>
                         </div>
-                        <div class="total_balance col-md-6 col-lg-6">
+                        <div class="total_balance col-xs-6 col-sm-6 col-md-6 col-lg-6">
                             <p>-50 грн</p>
                         </div>
-                        <div class="total_balance col-md-6 col-lg-6">
+                        <div class="total_balance col-xs-6 col-sm-6 col-md-6 col-lg-6">
                             <p>Счет 4</p>
                         </div>
-                        <div class="total_balance col-md-6 col-lg-6">
+                        <div class="total_balance col-xs-6 col-sm-6 col-md-6 col-lg-6">
                             <p>-300 грн</p>
                         </div>
-                        <div class="total_balance col-md-6 col-lg-6">
+                        <div class="total_balance col-xs-6 col-sm-6 col-md-6 col-lg-6">
                             <p>Счет 5</p>
                         </div>
-                        <div class="total_balance col-md-6 col-lg-6">
+                        <div class="total_balance col-xs-6 col-sm-6 col-md-6 col-lg-6">
                             <p>-500 грн</p>
                         </div>
                     </div>
                 </div>
+
                 <div class="left-column col-md-6 col-lg-6">
-                    <form class="form-horizontal">
-                        <div class="control-group">
-                            <label class="control-label" for="inputEmail">Email</label>
-                            <div class="controls">
-                                <input type="text" id="inputEmail" placeholder="Email">
+
+                    <form class="form-horizontal" role="form">
+                        <h3 class="text-center">Новый счет</h3>
+                        <div class="form-group">
+                            <label class="control-label col-xs-2 col-sm-2" for="name">Имя:</label>
+                            <div class="col-xs-8 col-sm-6">
+                                <input type="email" class="form-control" id="name" placeholder="Введите имя">
                             </div>
                         </div>
-                        <div class="control-group">
-                            <label class="control-label" for="inputPassword">Пароль</label>
-                            <div class="controls">
-                                <input type="password" id="inputPassword" placeholder="Пароль">
+                        <div class="form-group">
+                            <label class="control-label col-xs-2  col-sm-2" for="balance">Баланс:</label>
+                            <div class="col-xs-8 col-sm-6">
+                                <input type="password" class="form-control" id="pwd" placeholder="Введите сумму баланса">
                             </div>
                         </div>
-                        <div class="control-group">
-                            <div class="controls">
-                                <label class="checkbox">
-                                    <input type="checkbox"> Запомнить меня
-                                </label>
-                                <button type="submit" class="btn">Войти</button>
+                        <div class="form-group">
+                            <label class="control-label col-xs-2  col-sm-2" for="name">Валюта:</label>
+                            <div class="col-xs-8 col-sm-6">
+                                <select class="form-control">
+                                    <option>Гривна</option>
+                                    <option>Доллар</option>
+                                    <option>Евро</option>
+                                    <option>Фунты стерлингов</option>
+                                    <option>Рупии</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group col-xs-12">
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <button type="submit" class="btn btn-default">Создать</button>
                             </div>
                         </div>
                     </form>
+                    <div class="right-column col-md-6 col-lg-6">
+
+                    </div>
+
 
                 </div>
-                <div class="right-column col-md-6 col-lg-6">
-
-                </div>
-
 
             </div>
-
-
         </container>
 
 
     </section>
 
+<section>
+    <div class="container">
+<div class="put_text-here">
+    <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt, numquam, praesentium. Quasi asperiores consequuntur fugiat architecto eveniet quidem ratione delectus, nihil ab sed maxime, eligendi sint numquam quod! Autem, mollitia.</div>
+    <div>Eligendi esse magnam repellat adipisci id reprehenderit beatae ducimus ullam illum quam perferendis inventore maiores cum alias delectus assumenda ipsa, dignissimos ut voluptates eos. Itaque corporis sit maiores quo dolore.</div>
+    <div>Nisi sapiente dolorum totam nihil deserunt, quod iusto! Vitae ratione ipsam, vel ipsum molestias odit, saepe! Accusantium consectetur quaerat, corporis voluptatibus incidunt aperiam voluptates modi necessitatibus deleniti expedita suscipit cum.</div>
+    <div>Voluptas et, rem nobis, necessitatibus veritatis consectetur sapiente expedita ullam, porro culpa, maiores perspiciatis fugit. Temporibus, officia. Praesentium quod quo, laborum, dignissimos magnam eligendi nam, enim dolore ut beatae aliquam.</div>
+    <div>Ipsa sed quaerat mollitia, totam, alias natus non, beatae, ipsum repellat inventore ex amet. Necessitatibus molestias, nisi, facere reprehenderit quae iste iusto dolores, nam iure, eum itaque facilis eveniet distinctio!</div>
+    <div>Enim facilis, velit. Omnis rem, recusandae obcaecati accusantium fugiat assumenda laudantium, vel quibusdam dicta animi in, voluptate sunt. Nisi dolore sit, expedita incidunt assumenda doloremque quas. Impedit atque, illo quae.</div>
+    <div>Eos eligendi sed velit! Eum laborum, possimus aliquid harum dolorum quam dolores officia maiores omnis. Vitae quisquam, libero consequatur dignissimos molestias perspiciatis dicta, maxime porro, blanditiis soluta nam qui laborum!</div>
+    <div>Eos commodi quaerat perferendis eveniet nobis odit adipisci possimus vitae quidem excepturi, fuga perspiciatis, dolor maiores magnam minus molestias, voluptates fugiat, error ex. Enim necessitatibus hic dignissimos incidunt in adipisci.</div>
+    <div>Facere eius necessitatibus quaerat, quisquam voluptates cum repellat iure deserunt ut tenetur quis perferendis enim praesentium eum fugit eligendi ratione. Eveniet facere doloremque, dolores vero error ab molestias eaque expedita.</div>
+    <div>Vitae dolores fugit qui odit necessitatibus repellat ab beatae, neque, ipsum sint et libero accusamus. Repudiandae tenetur, deserunt maiores reiciendis totam veniam tempora quos doloremque voluptas rem nobis veritatis quas.</div>
+</div>
+    </div>
+</section>
 
+<footer class="text-center">
+        <div class="footer-info">
+            <div class="container">
+                <div class="row">
+                    <div class="footer-col">
+                        <h3>Social links</h3>
+                        <ul class="list-inline box-social">
+                            <li>
+                                <a href="#" class="btn-social btn-outline">
+                                    <i class="fa fa-fw fa-facebook  "></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="btn-social btn-outline">
+                                    <i class="fa fa-fw fa-google-plus  "></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="btn-social btn-outline">
+                                    <i class="fa fa-fw fa-twitter  "></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="btn-social btn-outline">
+                                    <i class="fa fa-fw fa-linkedin"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 copyright-box">Copyright © My_budjet 2015</div>
+                </div>
+            </div>
+        </div>
+    </footer>
 
 
 
