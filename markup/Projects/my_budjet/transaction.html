@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Мой бюджет - место где вы сможете контролировать свои расходы</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <nav class="navbar navbar-default navbar-fixed-top">
+
+        <div class="container">
+
+            <div class="nav-bar-header">
+
+                <button type='button' class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                <a class="navbar-brand" href="#">Мой бюджет</a>
+
+            </div>
+
+            <div class="navbar-collapse collapse" id="bs-example-navbar-collapse-1">
+
+                <ul class="nav navbar-nav">
+                    <li><a href="home.html">Главная</a></li>
+                    <li class="active"><a href="#">Трансакции</a></li>
+                    <li><a href="accounts.html">Бюджет</a></li>
+                    <li><a href="#">Отчеты</a></li>
+                    <li><a href="#">Счета</a></li>
+                    <li><a href="#">Категории</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right col-sm-8 col-md-3">
+                    <li><a href="#"><span class="glyphicon glyphicon-user"></span> Авториация</a></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Выйти</a></li>
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+
+    <section>
+        <div class="container transaction_block">
+
+            <div class="transaction_left col-xs-4 col-md-4 col-lg-4">
+                <div id="addTransactionDivId" class="addTransactionDiv text-center">
+                    <button type="button" class="showAddTransactionButton btn btn-primary btn-lg">Новая трансакция</button>
+
+                    <div id="transactionInputDiv" class="">
+                        <form action="transactions.htm" method="POST" onsubmit="return validateTransactionForm()">
+                            <button type="button" class="btn btn-default btn-md" onclick="incomeButton()">Доходы</button>
+                            <button type="button" class="btn btn-default btn-md" onclick="expenseButton()">Растраты</button>
+                            <button type="button" class="btn btn-default btn-md">Платежи</button>
+
+
+
+                            <input id="dateInput" class="transactionInput inputColor" type="date" name="date">
+                            <div id="sign" class="inlineBlock">+</div>
+                            <input id="valueInput" class="transactionInput inputColor" type="text" autocomplete="off" name="value" placeholder="0,00" oninput="this.value = validateNumberInput(this.value)">
+                            <div class="form-group">
+                                <label for="sel1">Выберите счет:</label>
+                                <select class="form-control" id="sel1">
+                                    <option>Счет 1</option>
+                                    <option>Счет 2</option>
+                                    <option>Счет 3</option>
+                                    <option>Счет 4</option>
+                                </select>
+                                <label for="sel1">Select list:</label>
+                                <select class="form-control" id="sel1">
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="comment">Выберите:</label>
+                                <textarea class="form-control" rows="5" id="comment"></textarea>
+                                <div class="text-center"><input type="submit" class="btn btn-primary btn-lg" value="Submit Button"></div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="transaction_right col-xs-8 col-md-8 col-lg-8">
+                <div class="col-xl-12 text-center">
+                    <h2>Последние операции</h2></div>
+                <div class="col-xl-12 text-left row">
+                    <div class="transaction_name">
+                        <div class="col-md-3">Дата</div>
+                        <div class="col-md-3">Категория</div>
+                        <div class="col-md-3">Сумма</div>
+                        <div class="col-md-3">Счет</div>
+                    </div>
+                    <div class="transaction_complete">
+                        <div class="col-md-3">01.01.2015</div>
+                        <div class="col-md-3">Доход</div>
+                        <div class="col-md-3">1000.00 грн</div>
+                        <div class="col-md-3">Счет 1</div>
+                    </div>
+                    <div class='row'>
+                        <div class='col-md-12'>
+                            <hr>
+                        </div>
+                    </div>
+                    <div class="transaction_name">
+                        <div class="col-md-3">Дата</div>
+                        <div class="col-md-3">Категория</div>
+                        <div class="col-md-3">Сумма</div>
+                        <div class="col-md-3">Счет</div>
+                    </div>
+                    <div class="transaction_complete">
+                        <div class="col-md-3">01.01.2015</div>
+                        <div class="col-md-3">Доход</div>
+                        <div class="col-md-3">1000.00 грн</div>
+                        <div class="col-md-3">Счет 1</div>
+                    </div>
+                    <div class='row'>
+                        <div class='col-md-12'>
+                            <hr>
+                        </div>
+                    </div>
+                    <div class="transaction_name">
+                        <div class="col-md-3">Дата</div>
+                        <div class="col-md-3">Категория</div>
+                        <div class="col-md-3">Сумма</div>
+                        <div class="col-md-3">Счет</div>
+                    </div>
+                    <div class="transaction_complete">
+                        <div class="col-md-3">01.01.2015</div>
+                        <div class="col-md-3">Доход</div>
+                        <div class="col-md-3">1000.00 грн</div>
+                        <div class="col-md-3">Счет 1</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+
+    <footer class="text-center">
+        <div class="footer-info">
+            <div class="container">
+                <div class="row">
+                    <div class="footer-col">
+                        <h3>Social links</h3>
+                        <ul class="list-inline box-social">
+                            <li>
+                                <a href="#" class="btn-social btn-outline">
+                                    <i class="fa fa-fw fa-facebook  "></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="btn-social btn-outline">
+                                    <i class="fa fa-fw fa-google-plus  "></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="btn-social btn-outline">
+                                    <i class="fa fa-fw fa-twitter  "></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="btn-social btn-outline">
+                                    <i class="fa fa-fw fa-linkedin"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 copyright-box">Copyright © My_budjet 2015</div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/transactions.js"></script>
+</body>
+
+</html>
