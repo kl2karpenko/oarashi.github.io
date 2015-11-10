@@ -1,4 +1,5 @@
 /*Login*/
+
 .presentation {
     margin-top: 50px;
 }
@@ -40,6 +41,7 @@ footer h3 {
     border: 2px solid #fff;
     border-radius: 100%;
 }
+
 .form-button {
     margin-bottom: 60px;
 }
@@ -96,14 +98,14 @@ footer h3 {
 }
 
 
-/*accounts*/
+/*Home*/
 
 .accounts {
     margin-top: 50px;
 }
 
 .balance {
-    font-size: 18px;
+    font-size: 20px;
 }
 
 .balance_name {
@@ -116,147 +118,21 @@ footer h3 {
 
 #mainDivId {
     margin-top: 55px;
-
-}
-html {
-	/*18px*/
-	font-size: 1.40625vmax;
-	height: 100%;
-	/*min-height: 100%;*/
-}
-
-h1 {
-	/*28px*/
-	font-size: 1.555555rem;
-	display: inline;
-}
-
-.hoverBg {
-	background-color: #85b7bc;
-}
-.addAccountDiv, .addCategoryDiv {
-    visibility: hidden;
-}
-
-.addTransactionDiv {
-    display: inline-block;
-    float: left;
-    margin-left: 20px;
-    padding: 15px;
-
-}
-
-
-#transactionInputDiv {
-    display: none;
-    padding: 10px 0px;
-}
-
-#dateInput {
-	padding: 0px;
-	padding-left: 10px;
-	padding-right: 10px;
-}
-
-.typeButton {
-
-	padding: 5px 10px;
-	background-color: #85b7bc;
-}
-
-
-.transactionInput {
-	font-size: 16px;
-    padding: 2px 10px;
-}
-
-.typeButton:focus, .transactionInput:focus {
-	outline: none;
-}
-
-.typeButton:hover {
-	background-color: #efeae6;
-}
-
-#transactionInputDiv textarea {
-	border-radius: 14px 14px 14px 14px;
-}
-
-#transactionInputDiv select {
-
-}
-
-.addTransactionButton {
-	font-size: 1rem;
-
-}
-
-.addTransactionButton:hover {
-	background-color: #efeae6;
-}
-
-.addTransactionButton:focus {
-	outline: none;
-}
-
-#transactionInputDiv input[type=text] {
-	border: 1px solid black;
 }
 
 #sign {
-	width: 10px;
-	text-align: center;
-}
-
-#allTransactions {
-	display: inline-block;
-	padding-left: 20px;
-	padding-top: 15px;
-}
-
-#allTransactions table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
-
-
-.transactionRow {
-	display: inline-block;
-	padding-left: 20px;
-	padding-right: 5px;
-	padding-top: 10px;
-	padding-bottom: 5px;
-	border-radius: 10px 10px 10px 10px;
-	border: 1px solid #efeae6;
-}
-
-.transactionRow:hover {
-	background-color: rgba(197, 151, 117, 0.2);
+    width: 10px;
+    text-align: center;
 }
 
 .transaction_block {
-    margin: 60px;
-    min-height: 550px;
-
+    margin-top: 60px;
 }
 
-.transaction_block {
-    margin-top: 100px;
-
-}
- .transaction-operations {
-    min-width: 300px;
-    text-align: left;
-}
-.transaction_name {
-    margin-bottom: 20px;
+.transaction-operations {
+    font-size: 18px;
 }
 
-@media screen and (max-width: 400px) {
-.transaction_name {
-    margin-left: -70px;
-
-}
-
-
+.categories_operations {
+    font-size: 20px;
 }

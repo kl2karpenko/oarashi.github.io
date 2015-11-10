@@ -1,7 +1,7 @@
 
 $(document).ready(function() {
-    $(".showAddTransactionButton").click(function() {
-        $("#transactionInputDiv").slideToggle(200);
+    $(".show_new_transation_menu").click(function() {
+        $(".hide_menu").toggleClass('hide');
 
         var today = new Date();
         var year = today.getFullYear();
