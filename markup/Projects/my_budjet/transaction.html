@@ -57,22 +57,24 @@
     </nav>
 
     <section>
+
         <div class="container transaction_block">
 
-            <div class="transaction_left col-xs-4 col-md-4 col-lg-4">
-                <div id="addTransactionDivId" class="addTransactionDiv text-center">
-                    <button type="button" class="showAddTransactionButton btn btn-primary btn-lg">Новая трансакция</button>
+            <div class="text-center transaction_left col-xs-6 col-md-4 col-lg-4 ">
+                <div id="addTransactionDivId" class="addTransactionDiv text-center row">
+                    <button type="button" class="showAddTransactionButton btn btn-primary btn-lg col-xl-12">Новая трансакция</button>
 
-                    <div id="transactionInputDiv" class="">
-                        <form action="transactions.htm" method="POST" onsubmit="return validateTransactionForm()">
-                            <button type="button" class="btn btn-default btn-md" onclick="incomeButton()">Доходы</button>
-                            <button type="button" class="btn btn-default btn-md" onclick="expenseButton()">Растраты</button>
-                            <button type="button" class="btn btn-default btn-md">Платежи</button>
-
+                    <div id="transactionInputDiv" class="row">
+                        <form class="col-md-12" action="transactions.htm" method="POST" onsubmit="return validateTransactionForm()">
+                            <button type="button" class="btn btn-default btn-md col-xs-12 col-md-4" onclick="incomeButton()">Доходы</button>
+                            <button type="button" class="btn btn-default btn-md col-xs-12 col-md-4" onclick="expenseButton()">Растраты</button>
+                            <button type="button" class="btn btn-default btn-md col-xs-12 col-md-4">Платежи</button>
+                            <div class="transaction_date">Дата транзакции: </div>
 
 
                             <input id="dateInput" class="transactionInput inputColor" type="date" name="date">
                             <div id="sign" class="inlineBlock">+</div>
+                            <div class="transation_sum">Сумма транзакции: </div>
                             <input id="valueInput" class="transactionInput inputColor" type="text" autocomplete="off" name="value" placeholder="0,00" oninput="this.value = validateNumberInput(this.value)">
                             <div class="form-group">
                                 <label for="sel1">Выберите счет:</label>
@@ -82,7 +84,7 @@
                                     <option>Счет 3</option>
                                     <option>Счет 4</option>
                                 </select>
-                                <label for="sel1">Select list:</label>
+                                <label for="sel1">Выберите:</label>
                                 <select class="form-control" id="sel1">
                                     <option>1</option>
                                     <option>2</option>
@@ -91,65 +93,75 @@
                                 </select>
                             </div>
                             <div class="form-group">
-                                <label for="comment">Выберите:</label>
+                                <label for="comment">Комментарий:</label>
                                 <textarea class="form-control" rows="5" id="comment"></textarea>
-                                <div class="text-center"><input type="submit" class="btn btn-primary btn-lg" value="Submit Button"></div>
+                                <div class="text-center"><input type="submit" class="btn btn-primary btn-lg" value="Создать"></div>
                             </div>
                         </form>
                     </div>
                 </div>
             </div>
 
-            <div class="transaction_right col-xs-8 col-md-8 col-lg-8">
-                <div class="col-xl-12 text-center">
+            <div class="transaction_right col-xs-12 col-md-8 col-lg-8">
+                <div class="col-xs-12 col-md-12 col-xl-12 text-center">
                     <h2>Последние операции</h2></div>
-                <div class="col-xl-12 text-left row">
-                    <div class="transaction_name">
-                        <div class="col-md-3">Дата</div>
-                        <div class="col-md-3">Категория</div>
-                        <div class="col-md-3">Сумма</div>
-                        <div class="col-md-3">Счет</div>
-                    </div>
-                    <div class="transaction_complete">
-                        <div class="col-md-3">01.01.2015</div>
-                        <div class="col-md-3">Доход</div>
-                        <div class="col-md-3">1000.00 грн</div>
-                        <div class="col-md-3">Счет 1</div>
+                <div class="transaction-operations col-xs-12">
+                    <div class=" transaction_name row">
+                        <div class="col-xs-3 col-md-3">Дата: <span>11.02.2015</span> </div>
+                        <div class="col-xs-3 col-md-3">Категория: <span>Доход</span></div>
+                        <div class="col-xs-3 col-md-3">Сумма: <span>1000.00 грн</span></div>
+                        <div class="col-xs-3 col-md-3">Счет: <span>Счет1</span></div>
                     </div>
                     <div class='row'>
                         <div class='col-md-12'>
                             <hr>
                         </div>
                     </div>
-                    <div class="transaction_name">
-                        <div class="col-md-3">Дата</div>
-                        <div class="col-md-3">Категория</div>
-                        <div class="col-md-3">Сумма</div>
-                        <div class="col-md-3">Счет</div>
-                    </div>
-                    <div class="transaction_complete">
-                        <div class="col-md-3">01.01.2015</div>
-                        <div class="col-md-3">Доход</div>
-                        <div class="col-md-3">1000.00 грн</div>
-                        <div class="col-md-3">Счет 1</div>
+<div class=" transaction_name row">
+                        <div class="col-xs-3 col-md-3">Дата: <span>11.02.2015</span> </div>
+                        <div class="col-xs-3 col-md-3">Категория: <span>Доход</span></div>
+                        <div class="col-xs-3 col-md-3">Сумма: <span>1000.00 грн</span></div>
+                        <div class="col-xs-3 col-md-3">Счет: <span>Счет1</span></div>
                     </div>
                     <div class='row'>
                         <div class='col-md-12'>
                             <hr>
                         </div>
                     </div>
-                    <div class="transaction_name">
-                        <div class="col-md-3">Дата</div>
-                        <div class="col-md-3">Категория</div>
-                        <div class="col-md-3">Сумма</div>
-                        <div class="col-md-3">Счет</div>
+<div class=" transaction_name row">
+                        <div class="col-xs-3 col-md-3">Дата: <span>11.02.2015</span> </div>
+                        <div class="col-xs-3 col-md-3">Категория: <span>Доход</span></div>
+                        <div class="col-xs-3 col-md-3">Сумма: <span>1000.00 грн</span></div>
+                        <div class="col-xs-3 col-md-3">Счет: <span>Счет1</span></div>
                     </div>
-                    <div class="transaction_complete">
-                        <div class="col-md-3">01.01.2015</div>
-                        <div class="col-md-3">Доход</div>
-                        <div class="col-md-3">1000.00 грн</div>
-                        <div class="col-md-3">Счет 1</div>
+                    <div class='row'>
+                        <div class='col-md-12'>
+                            <hr>
+                        </div>
                     </div>
+<div class=" transaction_name row">
+                        <div class="col-xs-3 col-md-3">Дата: <span>11.02.2015</span> </div>
+                        <div class="col-xs-3 col-md-3">Категория: <span>Доход</span></div>
+                        <div class="col-xs-3 col-md-3">Сумма: <span>1000.00 грн</span></div>
+                        <div class="col-xs-3 col-md-3">Счет: <span>Счет1</span></div>
+                    </div>
+                    <div class='row'>
+                        <div class='col-md-12'>
+                            <hr>
+                        </div>
+                    </div>
+<div class=" transaction_name row">
+                        <div class="col-xs-3 col-md-3">Дата: <span>11.02.2015</span> </div>
+                        <div class="col-xs-3 col-md-3">Категория: <span>Доход</span></div>
+                        <div class="col-xs-3 col-md-3">Сумма: <span>1000.00 грн</span></div>
+                        <div class="col-xs-3 col-md-3">Счет: <span>Счет1</span></div>
+                    </div>
+                    <div class='row'>
+                        <div class='col-md-12'>
+                            <hr>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>

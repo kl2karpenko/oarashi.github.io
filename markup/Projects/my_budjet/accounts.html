@@ -37,7 +37,7 @@
 
             </div>
 
-            <div class="navbar-collapse collapse">
+            <div class="navbar-collapse collapse" id="bs-example-navbar-collapse-1">
 
                 <ul class="nav navbar-nav">
                     <li><a href="home.html">Главная</a></li>
@@ -62,14 +62,14 @@
                 <div class="balance left-column col-md-6 col-lg-6 text-center">
                     <h3 class="text-center">Баланс</h3>
 
-                    <div class="balance row">
-                        <div class="balance_name col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                    <div class="balance col-xs-12">
+                        <div class="balance_name col-xs-5 col-sm-5 col-md-5 col-lg-5">
                             <p>Текущий баланс</p>
                         </div>
-                        <div class="total_balance col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                        <div class="total_balance col-xs-5 col-sm-6 col-md-6 col-lg-6">
                             <p>1000000.00 грн</p>
-                            <button class="button" onclick="$('#edit_balance').toggleClass('invisible');"; onclick="$('#new_account').toggleClass('invisible');">Редактироват счет</button>
                         </div>
+                        <button class="button_change_bill glyphicon glyphicon-edit"></button>
                     </div>
                     <div class="operations row">
                         <div class="balance_name col-xs-6 col-sm-6 col-md-6 col-lg-6">
@@ -105,7 +105,7 @@
                     </div>
                 </div>
 
-                <div id="new_account" class="left-column col-md-6 col-lg-6">
+                <div class="new_account left-column col-md-6 col-lg-6">
 
                     <form class="form-horizontal" role="form">
                         <h3 class="text-center">Новый счет</h3>
@@ -143,7 +143,7 @@
 
                 </div>
 
-                <div id="edit_balance" class="balance_edit invisible">
+                <div class="balance_edit hide">
                     <div class="col-md-6 col-lg-6">
 
                     <form class="form-horizontal" role="form">
@@ -230,11 +230,11 @@
 
 
 
-
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/accouts.js"></script>
 </body>
 
 </html>

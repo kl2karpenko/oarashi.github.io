@@ -29,8 +29,8 @@ footer h3 {
     font-size: 20px;
     line-height: 45px;
     display: inline-block;
-    width: 50px;
     height: 50px;
+    width: 50px;
     -webkit-transition: all .35s;
     -moz-transition: all .35s;
     -ms-transition: all .35s;
@@ -40,7 +40,6 @@ footer h3 {
     border: 2px solid #fff;
     border-radius: 100%;
 }
-
 .form-button {
     margin-bottom: 60px;
 }
@@ -114,17 +113,6 @@ footer h3 {
 .total_balance {
     text-align: right;
 }
-.balance_edit {
-    position: relative;
-    top: -250px;
-    right: 0;
-    background-color: #fff;
-    z-index: 2;
-}
-.balance_edit form{
-    width: 500px;
-
-}
 
 #mainDivId {
     margin-top: 55px;
@@ -143,19 +131,6 @@ h1 {
 	display: inline;
 }
 
-h2 {
-	/*20px*/
-	font-size: 1.111111rem;
-	display: inline;
-	font-weight: normal;
-}
-
-h3 {
-	/*14px*/
-	font-size: 0.777777rem;
-	display: inline;
-	font-weight: normal;
-}
 .hoverBg {
 	background-color: #85b7bc;
 }
@@ -171,9 +146,6 @@ h3 {
 
 }
 
-.showAddTransactionButton {
-    width: 200px;
-}
 
 #transactionInputDiv {
     display: none;
@@ -187,20 +159,14 @@ h3 {
 }
 
 .typeButton {
-	width: 100%;
+
 	padding: 5px 10px;
 	background-color: #85b7bc;
 }
 
-#transactionInputDiv td {
-	min-width: 60px;
-	height: 30px;
-}
 
 .transactionInput {
 	font-size: 16px;
-    width: 260px;
-    border: 0px;
     padding: 2px 10px;
 }
 
@@ -217,13 +183,12 @@ h3 {
 }
 
 #transactionInputDiv select {
-	width: 280px;
+
 }
 
 .addTransactionButton {
 	font-size: 1rem;
-	width: 100%;
-	height: 100%;
+
 }
 
 .addTransactionButton:hover {
@@ -247,16 +212,11 @@ h3 {
 	display: inline-block;
 	padding-left: 20px;
 	padding-top: 15px;
-	width: 60%;
 }
 
 #allTransactions table {
 	border-collapse: collapse;
 	border-spacing: 0;
-}
-
-#allTransactions table tr td {
-	min-width: 160px;
 }
 
 
@@ -277,5 +237,26 @@ h3 {
 .transaction_block {
     margin: 60px;
     min-height: 550px;
+
+}
+
+.transaction_block {
+    margin-top: 100px;
+
+}
+ .transaction-operations {
+    min-width: 300px;
+    text-align: left;
+}
+.transaction_name {
+    margin-bottom: 20px;
+}
+
+@media screen and (max-width: 400px) {
+.transaction_name {
+    margin-left: -70px;
+
+}
+
 
 }

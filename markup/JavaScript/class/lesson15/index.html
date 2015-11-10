@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <script>
+       function NamedOne(first, last) {
+// -- SHOULD be changed --
+    this.firstName = first;
+    this.lastName = last;
+    this.fullName = this.firstName + ' ' + this.lastName;
+}
+
+
+        var namedOne = new NamedOne("Naomi","Wang");
+        namedOne.firstName = "John";
+        namedOne.lastName = "Doe";
+        console.log(namedOne);
+        console.log(namedOne.fullName);
+
+    </script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>
