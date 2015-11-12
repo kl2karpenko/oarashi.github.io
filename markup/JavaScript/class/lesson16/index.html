@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>-->
+</head>
+
+<body>
+
+
+    <script>
+
+        var obj = {
+            a : [1, 2, 3],
+            b : 2,
+            c : 3
+        }
+
+        for (key in obj) {
+            var z = obj[key];
+
+            if (2 in obj[key]) console.log('Kaboom')
+        }
+
+    </script>
+</body>
+
+</html>

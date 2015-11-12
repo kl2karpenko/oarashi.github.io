@@ -101,7 +101,8 @@ footer h3 {
 /*Home*/
 
 .accounts {
-    margin-top: 50px;
+    margin-top: 100px;
+    font-size: 20px;
 }
 
 .balance {
@@ -135,4 +136,15 @@ footer h3 {
 
 .categories_operations {
     font-size: 20px;
+}
+
+.accounts {
+    min-height: 445px;
+
+}
+
+.history {
+    font-size: 20px;
+    min-height: 480px;
+
 }
