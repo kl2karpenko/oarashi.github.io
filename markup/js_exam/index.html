@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Wild gunman</title>
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+    <header>
+        <div class="player_timer"></div>
+        <div class="gunman_timer"></div>
+    </header>
+
+    <section class="game_screen">
+
+        <div class="intro">
+            <div class="button_start">
+                <button id="startGame" onclick='moveGunman()'>Start game</button>
+            </div>
+            <div class="button_credits">
+                <button id="credits">Credits</button>
+            </div>
+        </div>
+
+        <div class="playing_game">
+
+            <div id="gunman" class="gunman"></div>
+            <div class="button_restart">
+                <button>Restart</button>
+            </div>
+            <div class="button_next_level">
+                <button>next level</button>
+            </div>
+        </div>
+
+    </section>
+
+
+
+
+    <footer>
+        <div class="score">your score: <span class="score">22313</span></div>
+    </footer>
+
+
+
+
+
+    <script>
+        document.getElementById("gunman").addEventListener("transitionend", gunmanStanding);
+        document.getElementById("gunman").addEventListener("click", playerShoot);
+
+
+        function moveGunman() {
+            gunman.classList.add('gunman_walk');
+            startGame.classList.add('hide');
+            credits.classList.add('hide');
+
+        }
+
+        function gunmanStanding() {
+            gunman.classList.remove('gunman_walk');
+            gunman.classList.add('gunman_standing');
+
+        };
+
+        function playerShoot() {
+            gunman.classList.remove('gunman_standing');
+            gunman.classList.add('gunman_falling');
+
+        }
+    </script>
+
+    <script src="js/jquery.js"></script>
+    <!--<script src="js/script.js"></script>-->
+</body>
+
+</html>
