@@ -21,22 +21,16 @@ var Gunman = function (options) {
         $('#gunman').on('transitionend webkitTransitionEnd oTransitionEnd', gunmanStanding);
     };
 
-    var shoot = function () {
-        $("#gunman").click(bang);
-        $("#gunman").click(nextLevel);
-
+    function shoot () {
         function bang() {
             $('#gunman').removeClass('gunman_standing');
             $('#gunman').addClass('gunman_falling');
         }
-
-        function nextLevel() {
-            $('#nextLevel').addClass('unhide');
-        }
+        $("#gunman").click(bang);
     };
 
 
-    this.fire = function fire() {
+    this.fire = function() {
         setTimeout(shoot, 5000);
         setTimeout(function () {
             $('#message').removeClass('hide');
@@ -44,18 +38,7 @@ var Gunman = function (options) {
 
     };
 
-
 };
-
-$('#startGame').click(startGame);
-
-
-function startGame() {
-    gunman.move();
-    gunman.stand();
-    gunman.fire();
-}
-
 
 var gunman1 = new Gunman(),
     gunman2 = new Gunman(),
@@ -66,3 +49,12 @@ var gunman1 = new Gunman(),
 var allGunman = [gunman1, gunman2, gunman3, gunman4, gunman5];
 
 var gunman = allGunman[Math.floor(Math.random() * allGunman.length)];
+
+
+function startGame() {
+    gunman.move();
+    gunman.stand();
+    gunman.fire();
+}
+
+$('#startGame').click(startGame);
