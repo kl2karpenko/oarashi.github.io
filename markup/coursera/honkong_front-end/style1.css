@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: 28px;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+fieldset {
+    border: 10px solid yellow;
+    background-color: rgb(246, 255, 175);
+    margin-bottom: 10px;
+}
+
+legend {
+    margin-bottom: 14px;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+input {
+    margin-bottom: 7px;
+}
+
+.red_color {
+    background-color: red;
+    padding: 3px;
+}
+
+.purple_color {
+    background-color: purple;
+    padding: 3px;
+}
+.center {
+    text-align: center;
+}
+.center :first-child {
+    margin-left: -2px;
+}

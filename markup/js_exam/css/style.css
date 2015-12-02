@@ -1,13 +1,18 @@
 .hide {
     visibility: hidden;
 }
+
 .unhide {
     visibility: visible;
 }
 
 header {
     height: 105px;
-    background-color: #000000
+    background-color: #000;
+    color: #fff;
+    text-align: right;
+    padding-right: 20px;
+    font-size: 24px;
 }
 
 .game_screen {
@@ -95,7 +100,17 @@ button {
         background-position: -1450px 0;
     }
 }
+
 footer {
     height: 105px;
-    background-color: #000000
+    background-color: #000;
+    font: #fff;
+    font-size: 20px;
+}
+
+.score {
+    color: #fff;
+    font-size: 24px;
+    z-index: 999;
+    padding-left: 50px;
 }

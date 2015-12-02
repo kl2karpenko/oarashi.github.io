@@ -5,108 +5,118 @@
     <meta charset="UTF-8">
     <title>Wild gunman</title>
     <style>
-    .hide {
-    visibility: hidden;
-}
-.unhide {
-    visibility: visible;
-}
+        .hide {
+            visibility: hidden;
+        }
 
-header {
-    height: 105px;
-    background-color: #000000
-}
+        .unhide {
+            visibility: visible;
+        }
 
-.game_screen {
-    height: 500px;
-    background-image: url(../img/bg.png);
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-}
+        header {
+            height: 105px;
+            background-color: #000000
+        }
 
-button {
-    height: 80px;
-    width: 180px;
-    font-size: 24px;
-}
+        .game_screen {
+            height: 500px;
+            background-image: url(../img/bg.png);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+        }
 
-.intro {
-    text-align: center;
-    position: relative;
-}
+        button {
+            height: 80px;
+            width: 180px;
+            font-size: 24px;
+        }
 
-.button_start {
-    padding-top: 150px;
-}
+        .intro {
+            text-align: center;
+            position: relative;
+        }
 
-.button_restart {
-    text-align: center;
-    display: none;
-}
+        .button_start {
+            padding-top: 150px;
+        }
 
-.button_next_level {
-    text-align: center;
-    display: none;
-}
+        .button_restart {
+            text-align: center;
+            display: none;
+        }
 
-.button_credits {}
+        .button_next_level {
+            text-align: center;
+            display: none;
+        }
 
-.playing_game {
-    position: relative;
-}
+        .button_credits {}
 
-.gunman {
-    position: absolute;
-    top: -120px;
-    left: 1300px;
-    width: 120px;
-    height: 250px;
-    z-index: 999;
-    background-image: url(../img/gunman.png);
-    overflow: hidden;
-    background-size: 1800px;
-    background-position: 0 0;
-}
+        .playing_game {
+            position: relative;
+        }
+        .message {
+            font-size: 30px;
+            background-color: #fff;
+            width: 100px;
+            text-align: center;
+            margin: auto;
+            position: relative;
+            top: -180px;
+            visibility: hidden;
+        }
+        .gunman {
+            position: absolute;
+            top: -120px;
+            left: 1300px;
+            width: 120px;
+            height: 250px;
+            z-index: 999;
+            background-image: url(../img/gunman.png);
+            overflow: hidden;
+            background-size: 1800px;
+        }
 
-.gunman_walk {
-    left: 600px;
-    transition: left 5s linear;
-    animation: gunman_walk__steps .8s steps(3) infinite;
-}
+        .gunman_walk {
+            left: 600px;
+            transition: left 5s linear;
+            animation: gunman_walk .8s steps(3) infinite;
+        }
 
-@keyframes gunman_walk__steps {
-    from {
-        background-position: 0 0;
-    }
-    to {
-        background-position: -390px 0;
-    }
-}
+        @keyframes gunman_walk {
+            from {
+                background-position: 0 0;
+            }
+            to {
+                background-position: -390px 0;
+            }
+        }
 
-.gunman_standing {
-    background-position: -385px 0;
-    left: 600px;
-}
+        .gunman_standing {
+            background-position: -380px 0;
+            width: 135px;
+            left: 600px;
+        }
 
-.gunman_falling {
-    animation: gunman_falling .25s steps(1);
-    background-position: -1555px 0;
-    left: 600px;
-}
+        .gunman_falling {
+            animation: gunman_falling .25s steps(1);
+            background-position: -1555px 0;
+            left: 600px;
+        }
 
-@keyframes gunman_falling {
-    from {
-        background-position: -1295px 0;
-    }
-    to {
-        background-position: -1450px 0;
-    }
-}
-footer {
-    height: 105px;
-    background-color: #000000
-}
+        @keyframes gunman_falling {
+            from {
+                background-position: -1295px 0;
+            }
+            to {
+                background-position: -1450px 0;
+            }
+        }
 
+        footer {
+            height: 105px;
+            background-color: #000000
+        }
     </style>
 
 </head>
@@ -121,7 +131,7 @@ footer {
 
         <div class="intro">
             <div class="button_start">
-                <button id="startGame" onclick='moveGunman()'>Start game</button>
+                <button id="startGame">Start game</button>
             </div>
             <div class="button_credits">
                 <button id="credits">Credits</button>
@@ -131,11 +141,12 @@ footer {
         <div class="playing_game">
 
             <div id="gunman" class="gunman"></div>
+            <div class="message" id="message">Fire!</div>
             <div class="button_restart">
                 <button>Restart</button>
             </div>
-            <div class="button_next_level">
-                <button>next level</button>
+            <div id="nextLevel" class="button_next_level">
+                <button>Next level</button>
             </div>
         </div>
 
@@ -145,15 +156,10 @@ footer {
 
 
     <footer>
-        <div class="score">your score: <span class="score">22313</span></div>
+        <div id="score" class="score">your score: <span class="score"></span></div>
     </footer>
 
-
-
-
-
-
-    <script src="js/jquery.js"></script>
+    <script src="../js/jquery.js"></script>
     <script src="notes.js"></script>
 </body>
 

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+
+   <div id="div1" class="">Push</div>
+   <p class="clicked">Push again</p>
+
+   <div id="gunman" data-a='gunman' class="">
+       <div class="goal" data-a='goal'></div>
+   </div>
+
+
+
+    <script>
+        //$( document если изменять в динамически).on('click', 'div, p, .cliked', function (event) {
+          //  alert(event.target)
+        //})
+        //
+        //$('body').append( $('<div>Добавлено</div>'))
+
+        $(document).on('click', function(event) {
+            var $target = $(event.target);
+            alert('Yeah!' + $target.attr('data-a'));
+            console.log(this);
+
+        })
+
+    </script>
+</body>
+
+</html>
