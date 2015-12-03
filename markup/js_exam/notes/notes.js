@@ -5,46 +5,46 @@ var Game = {
 
 var Gunman = function (options) {
 
-    options = options || {};
+    var currentGunman = options || 1;
 
     this.move = function () {
         $('#startGame').addClass('hide');
         $('#credits').addClass('hide');
-        $('#gunman').addClass('gunman_walk');
+        $('#gunman').addClass('gunman_' + currentGunman + '_walk');
 
     };
     this.stand = function () {
         function gunmanStanding() {
-            $('#gunman').removeClass('gunman_walk');
-            $('#gunman').addClass('gunman_standing');
+            $('#gunman').removeClass('gunman_' + currentGunman + '_walk');
+            $('#gunman').addClass('gunman_' + currentGunman + '_standing');
         }
         $('#gunman').on('transitionend webkitTransitionEnd oTransitionEnd', gunmanStanding);
     };
 
-    function shoot () {
+    function shoot() {
         function bang() {
-            $('#gunman').removeClass('gunman_standing');
-            $('#gunman').addClass('gunman_falling');
+            $('#gunman').removeClass('gunman_' + currentGunman + '_standing');
+            $('#gunman').addClass('gunman_' + currentGunman + '_falling');
         }
         $("#gunman").click(bang);
     };
 
 
-    this.fire = function() {
+    this.fire = function () {
         setTimeout(shoot, 5000);
         setTimeout(function () {
-            $('#message').removeClass('hide');
+            $('.message').removeClass('hide');
         }, 5500);
 
     };
 
 };
 
-var gunman1 = new Gunman(),
-    gunman2 = new Gunman(),
-    gunman3 = new Gunman(),
-    gunman4 = new Gunman(),
-    gunman5 = new Gunman();
+var gunman1 = new Gunman(1),
+    gunman2 = new Gunman(2),
+    gunman3 = new Gunman(3),
+    gunman4 = new Gunman(4),
+    gunman5 = new Gunman(5);
 
 var allGunman = [gunman1, gunman2, gunman3, gunman4, gunman5];
 
