@@ -5,20 +5,19 @@
     <meta charset="UTF-8">
     <title>Wild gunman</title>
     <link rel="stylesheet" href="css/style.css">
-
 </head>
 
 <body>
     <header>
-        <div class="player_timer">2.00</div>
-        <div class="gunman_timer">1.00</div>
+        <div class="player_timer"></div>
+        <div class="gunman_timer"></div>
     </header>
 
     <section class="game_screen">
 
         <div class="intro">
             <div class="button_start">
-                <button id="startGame" onclick='moveGunman(); myFunction()'>Start game</button>
+                <button id="startGame">Start game</button>
             </div>
             <div class="button_credits">
                 <button id="credits">Credits</button>
@@ -28,59 +27,23 @@
         <div class="playing_game">
 
             <div id="gunman" class="gunman"></div>
+            <div class="message hide" id="message">Fire!</div>
             <div class="button_restart">
                 <button>Restart</button>
             </div>
-            <div class="button_next_level">
-                <button>next level</button>
+            <div id="nextLevel" class="button_next_level">
+                <button>Next level</button>
             </div>
         </div>
 
     </section>
 
-
-
-
     <footer>
-        <div class="score">Your score:<span class="score">0</span></div>
+        <div id="score" class="score">your score: <span class="score"></span></div>
     </footer>
 
-
-
-
-
-    <script>
-        document.getElementById("gunman").addEventListener("transitionend", gunmanStanding);
-        document.getElementById("gunman").addEventListener("click", playerShoot);
-
-
-        function moveGunman() {
-            gunman.classList.add('gunman_walk');
-            startGame.classList.add('hide');
-            credits.classList.add('hide');
-
-        }
-
-        function gunmanStanding() {
-            gunman.classList.remove('gunman_walk');
-            gunman.classList.add('gunman_standing');
-
-        };
-
-        function playerShoot() {
-            gunman.classList.remove('gunman_standing');
-            gunman.classList.add('gunman_falling');
-
-        }
-
-        function myFunction() {
-            alert("dont shoot now")
-
-        }
-    </script>
-
     <script src="js/jquery.js"></script>
-    <!--<script src="js/script.js"></script>-->
+    <script src="js/script.js"></script>
 </body>
 
 </html>

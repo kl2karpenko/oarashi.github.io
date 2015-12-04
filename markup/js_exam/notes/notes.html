@@ -8,11 +8,14 @@
         .hide {
             visibility: hidden;
         }
-
-        .unhide {
-            visibility: visible;
+        .undisplay {
+            display: none;
         }
 
+        body {
+            background-color: #000;
+
+        }
         header {
             height: 105px;
             background-color: #000000
@@ -20,6 +23,9 @@
 
         .game_screen {
             height: 500px;
+            max-width: 900px;
+            overflow: hidden;
+            margin: 0 auto;
             background-image: url(../img/bg.png);
             background-repeat: no-repeat;
             background-size: 100% 100%;
@@ -42,12 +48,10 @@
 
         .button_restart {
             text-align: center;
-            display: none;
         }
 
         .button_next_level {
             text-align: center;
-            display: none;
         }
 
         .button_credits {}
@@ -66,10 +70,28 @@
             top: -180px;
         }
 
+        .score {
+            background-color: #fff;
+            width: 200px;
+            font-size: 30px;
+            text-transform: uppercase;
+
+        }
+
+        .player_timer {
+            font-size: 30px;
+            width: 130px;
+            background-color: #fff;
+            text-align: center;
+            float: right;
+
+        }
+
+
         .gunman {
             position: absolute;
             top: -120px;
-            left: 1300px;
+            left: 900px;
             width: 120px;
             height: 250px;
             z-index: 999;
@@ -84,7 +106,7 @@
         /**/
 
         .gunman_1_walk {
-            left: 600px;
+            left: 50%;
             transition: left 5s linear;
             animation: gunman_1_walk .8s steps(3) infinite;
         }
@@ -92,13 +114,13 @@
         .gunman_1_standing {
             background-position: -380px 0;
             width: 135px;
-            left: 600px;
+            left: 50%;
         }
 
         .gunman_1_falling {
             animation: gunman_1_falling .25s steps(1);
             background-position: -1555px 0;
-            left: 600px;
+            left: 50%;
         }
 
         @keyframes gunman_1_walk {
@@ -123,7 +145,7 @@
         /**/
 
         .gunman_2_walk {
-            left: 600px;
+            left: 50%;
             transition: left 5s linear;
             animation: gunman_2_walk .8s steps(3) infinite;
         }
@@ -131,13 +153,13 @@
         .gunman_2_standing {
             background-position: -255px 260px;
             width: 135px;
-            left: 600px;
+            left: 50%;
         }
 
         .gunman_2_falling {
             animation: gunman_2_falling 1.25s steps(3);
             background-position: -1120px 260px;
-            left: 600px;
+            left: 50%;
         }
 
         @keyframes gunman_2_walk {
@@ -164,7 +186,7 @@
         /**/
 
         .gunman_3_walk {
-            left: 600px;
+            left: 50%;
             transition: left 5s linear;
             animation: gunman_3_walk .8s steps(3) infinite;
         }
@@ -172,13 +194,13 @@
         .gunman_3_standing {
             background-position: -380px 528px;
             width: 135px;
-            left: 600px;
+            left: 50%;
         }
 
         .gunman_3_falling {
             animation: gunman_3_falling 1.25s steps(3);
-            background-position: -1120px 528px;
-            left: 600px;
+            background-position: -1030px 528px;
+            left: 50%;
         }
 
         @keyframes gunman_3_walk {
@@ -205,7 +227,7 @@
         /**/
 
         .gunman_4_walk {
-            left: 600px;
+            left: 50%;
             transition: left 5s linear;
             animation: gunman_4_walk .8s steps(3) infinite;
         }
@@ -213,13 +235,13 @@
         .gunman_4_standing {
             background-position: -430px 848px;
             width: 135px;
-            left: 600px;
+            left: 50%;
         }
 
         .gunman_4_falling {
             animation: gunman_4_falling 1.25s steps(2);
             background-position: -790px 848px;
-            left: 600px;
+            left: 50%;
         }
 
         @keyframes gunman_4_walk {
@@ -244,7 +266,7 @@
         /**/
 
         .gunman_5_walk {
-            left: 600px;
+            left: 50%;
             transition: left 5s linear;
             animation: gunman_5_walk .8s steps(3) infinite;
         }
@@ -252,13 +274,13 @@
         .gunman_5_standing {
             background-position: -380px 1130px;
             width: 135px;
-            left: 600px;
+            left: 50%;
         }
 
         .gunman_5_falling {
             animation: gunman_5_falling 1.25s steps(2);
             background-position: -1120px 1130px;
-            left: 600px;
+            left: 50%;
         }
 
         @keyframes gunman_5_walk {
