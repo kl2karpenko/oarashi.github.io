@@ -8,35 +8,31 @@
 </head>
 
 <body>
-   <form name=TestForm>
-<input type=button value="Обнулить" onclick="clearСlock()">
-<input name=stopwatch size=10 value="00.00">
-<input type=button value="Запуск/Остановить" onclick="pause()">
-</form>
+
     <header>
-        <div class="player_timer"></div>
-        <div class="gunman_timer"></div>
+        <div class="player_timer"><span class="timer"></span></div>
+        <div class="gunman_timer"><span></span></div>
     </header>
 
     <section class="game_screen">
 
         <div class="intro">
             <div class="button_start">
-                <button id="startGame">Start game</button>
+                <button class="startGame">Start game</button>
             </div>
             <div class="button_credits">
-                <button id="credits">Credits</button>
+                <button class="credits">Credits</button>
             </div>
         </div>
 
         <div class="playing_game">
 
-            <div id="gunman" class="gunman"></div>
-            <div class="message hide" id="message">Fire!</div>
-            <div class="button_restart">
+            <div class="gunman"></div>
+            <div class="message hide">Fire!</div>
+            <div class="button_restart undisplay">
                 <button>Restart</button>
             </div>
-            <div id="nextLevel" class="button_next_level">
+            <div class="button_next_level undisplay">
                 <button>Next level</button>
             </div>
         </div>
@@ -44,7 +40,7 @@
     </section>
 
     <footer>
-        <div id="score" class="score">your score: <span class="score"></span></div>
+        <div class="score">your score: <span class="score"></span></div>
     </footer>
 
     <script src="js/jquery.js"></script>

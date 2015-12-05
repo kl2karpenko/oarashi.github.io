@@ -1,194 +1,139 @@
-//timerVariables
-var clocktimer;
-var dateObj;
-var ds;
-var ms;
-var readout = '';
-var s = 0,
-    ts = 0,
-    ms = 0,
-    timerFlag = true,
-    init = 0;
-//clearTimer
-function clearСlock() {
-    clearTimeout(clocktimer);
-    s = 0;
-    ts = 0;
-    ms = 0;
-    init = 0;
-    timerFlag = true;
-    readout = '00.00';
-    document.TestForm.stopwatch.value = readout;
-}
-//startTimer
-function startTIME() {
-    var cdateObj = new Date();
-    var t = (cdateObj.getTime() - dateObj.getTime()) - (s * 1000);
-    if (t > 999) {
-        s++;
-    }
+(function WildGunmanGame() {
 
-    ts = parseInt((ms / 100) + s);
-    if (ts >= 2) {
-        ts = 2;
-    }
+    var level = 0;
+    var scores = 0;
+    var playerTime = 0;
+    var maxTime = 300;
+    var playerWin = false;
 
-    ms = Math.round(t / 10);
-    if (ms > 99) {
-        ms = 0;
-    }
-    if (ms == 0) {
-        ms = '00';
-    }
-    if (ms > 0 && ms <= 9) {
-        ms = '0' + ms;
-    }
-    if (ts > 0) {
-        ds = ts;
-        if (ts < 10) {
-            ds = '0' + ts;
-        }
-    } else {
-        ds = '00';
-    }
+    //Begin Gunman constructor
+    function Gunman(options) {
+
+        /*var options = options || {};*/
+       this.currentGunman = (options || 1);
 
 
-    readout = ds + '.' + ms;
-    if (timerFlag == true) {
-        document.TestForm.stopwatch.value = readout;
-    }
-    clocktimer = setTimeout("startTIME()", 1);
-}
-//функция для паузы
-function pause() {
-    if (init == 0) {
-        dateObj = new Date();
-        startTIME();
-        init = 1;
-    } else {
-        if (timerFlag == true) {
-            timerFlag = false;
-        } else {
-            timerFlag = true;
-        }
-    }
-}
-var playerShoot = false;
-
-
-var Gunman = function (options) {
-
-
-    $('.button_restart').addClass('undisplay');
-    $('.button_next_level').addClass('undisplay');
-
-    /*function Timer() {
-        var timer = {
-            startTime: (new Date()).valueOf(),
-            currentTime: (new Date()).valueOf(),
-            inervalId: null,
-            interval: setInterval(function () {
-                timer.currentTime = (new Date).valueOf();
-            }, 100)
+        this.move = function () {
+            $('.gunman').addClass('gunman_' + gunman.currentGunman + '_walk');
         };
 
-        function MyDateInterval(interval) {
-            var time = {};
-            time.interval = interval;
-            time.s = Math.floor(interval / 1000) % 60 || 0;
-            time.ms = (Math.floor(interval / 100));
-            return time;
-        }
+        this.readyForShoot = function () {
+            $('.gunman').on('transitionend webkitTransitionEnd oTransitionEnd', function () {
+                $('.gunman').removeClass('gunman_' + gunman.currentGunman + '_walk');
+                $('.gunman').addClass('gunman_' + gunman.currentGunman + '_standing');
 
 
-        Object.observe(timer, function () {
-            var interval = new MyDateInterval(timer.currentTime - timer.startTime);
-            $('.player_timer').text(
-                interval.s + ' : ' + interval.ms
-            );
-        });
+                function timer() {
+                    if (playerTime < maxTime) {
+                        playerTime++;
+                        $('.player_timer').text('Player: ' + playerTime);
+
+                        //player don't shoot or shoot late
+                        if (playerTime == maxTime) {
+                            $('.startGame').removeClass('hide');
+                            clearInterval(intervalID);
+                            $('.gunman').removeClass('gunman_' + gunman.currentGunman + '_walking');
+                            $('.gunman').removeClass('gunman_' + gunman.currentGunman + '_standing');
+                            $('.gunman').removeClass('gunman_' + gunman.currentGunman + '_falling');
+                            playerTime = 0;
+
+                        };
+                    };
+
+                    $('.gunman_timer').text('Gunman: ' + maxTime);
+
+                };
+
+                intervalID = setInterval(timer, 10);
 
 
+                $('.gunman').on('click', function () {
 
-    };*/
+                    clearInterval(intervalID);
 
-    var currentGunman = options || 1;
+                    if (playerTime < maxTime) {
+                        $('.gunman').removeClass('gunman_' + gunman.currentGunman + '_standing');
+                        $('.gunman').addClass('gunman_' + gunman.currentGunman + '_falling');
+                        scores = (maxTime - playerTime) * 2;
 
-    this.move = function () {
-        $('#startGame').addClass('hide');
-        $('#credits').addClass('hide');
-        $('#gunman').addClass('gunman_' + currentGunman + '_walk');
+                        var scoreCounter = 0;
 
-    };
+                        function generateScores() {
 
+                            if (scoreCounter < scores) {
+                                scoreCounter++;
+                                $('.score').text('Your score:' + scoreCounter)
+                            }
 
-    this.stand = function () {
-        function gunmanStanding() {
-            $('#gunman').removeClass('gunman_' + currentGunman + '_walk');
-            $('#gunman').addClass('gunman_' + currentGunman + '_standing');
-            Timer();
-        }
-        $('#gunman').on('transitionend webkitTransitionEnd oTransitionEnd', gunmanStanding);
+                            if (scoreCounter == scores) {
+                                $('.button_next_level').removeClass('undisplay');
 
-    };
+                            }
 
-    function shoot() {
-        $("#gunman").on('click', function () {
-            $('#gunman').removeClass('gunman_' + currentGunman + '_standing');
-            $('#gunman').addClass('gunman_' + currentGunman + '_falling');
-            $('.message').addClass('hide');
-            playerShoot = true;
+                        }
 
-        });
-    };
+                        setInterval(generateScores, 1);
+
+                        playerWin = true;
+                    }
 
 
-    this.fire = function () {
-        setTimeout(shoot, 5000);
-        setTimeout(function () {
-            $('.message').removeClass('hide');
-        }, 5500);
-        setTimeout(function () {
-            $('.button_next_level').removeClass('undisplay');
-        }, 6500);
+                });
+
+            })
+
+        };
+        //END of function ready for shoot
+    }
+    //END of Gunman constructor
 
 
-    };
+    //
+    function startNewGame() {
 
-    function nextLevel() {
-        $('#gunman').removeClass('gunman_' + currentGunman + '_falling');
-        $('#gunman').removeClass('gunman_' + currentGunman + '_walking');
-        $('#gunman').css({
-            'left': 100 + 'px'
-        });
+        $('.startGame, .credits').addClass('hide');
+        playerTime = 0;
+        maxTime = 300;
         gunman.move();
-        gunman.stand();
-        gunman.fire();
+        gunman.readyForShoot();
     }
 
-    $('#nextLevel').on('click', nextLevel);
+    function nextLevel() {
+        $('.button_next_level').addClass('undisplay');
+
+        $('.gunman').removeClass('gunman_' + gunman.currentGunman + '_walking');
+        $('.gunman').removeClass('gunman_' + gunman.currentGunman + '_standing');
+        $('.gunman').removeClass('gunman_' + gunman.currentGunman + '_falling');
+        $('.gunman').addClass('gunman_defaul_position');
 
 
-    //end of Gunman
-};
+        level++;
+        if (level >= 5) {console.log('YOU WIN!!!!')};
+
+        gunman.move();
+        gunman.readyForShoot();
+    }
 
 
-var gunman1 = new Gunman(1),
-    gunman2 = new Gunman(2),
-    gunman3 = new Gunman(3),
-    gunman4 = new Gunman(4),
-    gunman5 = new Gunman(5);
+    //
+    //Creating gunmen
+    var gunman1 = new Gunman(1);
+    var gunman2 = new Gunman(2);
+    var gunman3 = new Gunman(3);
+    var gunman4 = new Gunman(4);
+    var gunman5 = new Gunman(5);
 
-var allGunman = [gunman1, gunman2, gunman3, gunman4, gunman5];
+    //
+    //creating gunman array and randomize it
+    var allGunmen = [gunman1, gunman2, gunman3, gunman4, gunman5];
 
-var gunman = allGunman[Math.floor(Math.random() * allGunman.length)];
+    var gunman = allGunmen[Math.floor(Math.random() * allGunmen.length)];
 
-$('#gunman').addClass('gunman_defaul_position');
 
-function startGame() {
-    gunman.move();
-    gunman.stand();
-    gunman.fire();
-}
+    $('.startGame').on('click', startNewGame);
+    $('.button_next_level').on('click', nextLevel);
 
-$('#startGame').on('click', startGame);
+
+
+})();
+//END of GAME code
