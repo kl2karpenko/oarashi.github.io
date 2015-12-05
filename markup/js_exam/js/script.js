@@ -10,15 +10,14 @@
     function Gunman(options) {
 
         /*var options = options || {};*/
-       this.currentGunman = (options || 1);
-
+        this.currentGunman = (options || 1);
 
         this.move = function () {
             $('.gunman').addClass('gunman_' + gunman.currentGunman + '_walk');
         };
 
         this.readyForShoot = function () {
-            $('.gunman').on('transitionend webkitTransitionEnd oTransitionEnd', function () {
+            $('.gunman').on('transitionend webkitTransitionEnd oTransitionEnd', function fire() {
                 $('.gunman').removeClass('gunman_' + gunman.currentGunman + '_walk');
                 $('.gunman').addClass('gunman_' + gunman.currentGunman + '_standing');
 
@@ -32,9 +31,9 @@
                         if (playerTime == maxTime) {
                             $('.startGame').removeClass('hide');
                             clearInterval(intervalID);
-                            $('.gunman').removeClass('gunman_' + gunman.currentGunman + '_walking');
+
                             $('.gunman').removeClass('gunman_' + gunman.currentGunman + '_standing');
-                            $('.gunman').removeClass('gunman_' + gunman.currentGunman + '_falling');
+
                             playerTime = 0;
 
                         };
@@ -68,15 +67,17 @@
                             if (scoreCounter == scores) {
                                 $('.button_next_level').removeClass('undisplay');
 
+                                $('.gunman').removeClass('gunman_' + gunman.currentGunman + '_falling');
+                                $('.gunman').off('transitionend webkitTransitionEnd oTransitionEnd', fire)
+
                             }
 
                         }
 
                         setInterval(generateScores, 1);
 
-                        playerWin = true;
-                    }
 
+                    }
 
                 });
 
@@ -86,8 +87,6 @@
         //END of function ready for shoot
     }
     //END of Gunman constructor
-
-
     //
     function startNewGame() {
 
@@ -99,16 +98,14 @@
     }
 
     function nextLevel() {
-        $('.button_next_level').addClass('undisplay');
 
-        $('.gunman').removeClass('gunman_' + gunman.currentGunman + '_walking');
-        $('.gunman').removeClass('gunman_' + gunman.currentGunman + '_standing');
-        $('.gunman').removeClass('gunman_' + gunman.currentGunman + '_falling');
-        $('.gunman').addClass('gunman_defaul_position');
+        $('.button_next_level').addClass('hide');
 
 
         level++;
-        if (level >= 5) {console.log('YOU WIN!!!!')};
+        if (level >= 5) {
+            console.log('YOU WIN!!!!')
+        };
 
         gunman.move();
         gunman.readyForShoot();
@@ -132,7 +129,6 @@
 
     $('.startGame').on('click', startNewGame);
     $('.button_next_level').on('click', nextLevel);
-
 
 
 })();

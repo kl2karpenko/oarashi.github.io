@@ -167,40 +167,46 @@ button {
 /**/
 
 .gunman_2_walk {
+    height: 300px;
     left: 50%;
     transition: 5s linear;
     animation: gunman_2_walk .8s steps(3) infinite;
 }
 
 .gunman_2_standing {
-    background-position: -255px 260px;
+    background-position: -255px 280px;
+    height: 280px;
     width: 135px;
     left: 50%;
 }
 
 .gunman_2_falling {
     animation: gunman_2_falling 1.25s steps(3);
-    background-position: -1120px 260px;
+    background-position: -1120px 280px;
     left: 50%;
+    height: 280px;
 }
 
 @keyframes gunman_2_walk {
     from {
-        background-position: 0 260px;
+        height: 280px;
+        background-position: 0 280px;
     }
     to {
-        background-position: -390px 260px;
+        height: 280px;
+        background-position: -390px 280px;
     }
 }
 
 @keyframes gunman_2_falling {
     from {
-        background-position: -743px 260px;
-        width: 125px;
+
+        background-position: -743px 280px;
+
     }
     to {
-        background-position: -1123px 260px;
-        width: 100px;
+        background-position: -1123px 280px;
+
     }
 }
 
@@ -261,6 +267,7 @@ button {
 /**/
 
 .gunman_4_walk {
+    height: 300px;
     left: 50%;
     transition: 5s linear;
     animation: gunman_4_walk .8s steps(3) infinite;
@@ -270,6 +277,7 @@ button {
     background-position: -430px 848px;
     width: 135px;
     left: 50%;
+    height: 300px;
 }
 
 .gunman_4_falling {
@@ -280,10 +288,12 @@ button {
 
 @keyframes gunman_4_walk {
     from {
-        background-position: 20px 800px;
+        height: 300px;
+        background-position: 20px 848px;
     }
     to {
-        background-position: -315px 800px;
+        height: 300px;
+        background-position: -315px 848px;
     }
 }
 
