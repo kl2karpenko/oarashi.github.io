@@ -1,8 +1,27 @@
-var Game = {
-    level: 0,
-    score: 0,
+var counter = 10;
 
-    Gunman: function (options) {
+function myFunc() {
+    return setInterval(function () {
+        if (counter > 0) {
+            counter--;
+            $('.player_timer').text(counter);
+        }
+    }, 100)
+
+}
+myFunc();
+
+console.log(counter)
+
+
+
+
+
+/*function Game(window) {
+    var level = 0;
+    var score = 0;
+
+    var Gunman = function(options) {
 
         $('.button_restart').addClass('undisplay');
         $('#nextLevel').addClass('undisplay');
@@ -39,11 +58,21 @@ var Game = {
             });
 
 
-            setTimeout(function () {
-                /*WHAT IS THIS -->*/
+            function setTimeout() {
+                WHAT IS THIS -->
                 clearInterval(timer.interval);
             }, 16 * 100);
         };
+
+        function Timer() {
+            var counter = 0;
+            setInterval(function () {
+                counter++
+            }, 100);
+            console.log(counter);
+
+        };
+
 
         var currentGunman = options || 1;
 
@@ -87,28 +116,30 @@ var Game = {
 
 
         //end of Gunman
-    },
+    };
 
 
-    gunman1: new Gunman(1),
-    gunman2: new Gunman(2),
-    gunman3: new Gunman(3),
-    gunman4: new Gunman(4),
-    gunman5: new Gunman(5),
+    var gunman1 = new Gunman(1),
+        gunman2 = new Gunman(2),
+        gunman3 = new Gunman(3),
+        gunman4 = new Gunman(4),
+        gunman5 = new Gunman(5);
 
-    allGunman: [gunman1, gunman2, gunman3, gunman4, gunman5],
+    var allGunman = [gunman1, gunman2, gunman3, gunman4, gunman5];
 
-    gunman: allGunman[Math.floor(Math.random() * allGunman.length)],
+    var gunman = allGunman[Math.floor(Math.random() * allGunman.length)];
 
 
-    startGame: function startGame() {
+    function startGame() {
         gunman.move();
         gunman.stand();
         gunman.fire();
-    },
+    };
 
-    start: function () {
+    function start() {
         $('#startGame').on('click', startGame.startGame);
     }
 
 };
+
+Game();*/
