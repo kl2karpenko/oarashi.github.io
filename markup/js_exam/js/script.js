@@ -76,12 +76,12 @@
                                 $('.button_next_level').removeClass('undisplay');
 
                                 $('.gunman').removeClass('gunman_' + gunman.currentGunman + '_falling');
-                                $('.gunman').off('transitionend webkitTransitionEnd oTransitionEnd', fire);
+
                                 $('.score').text(scores);
 
                                 playerTime = 0;
 
-                                $('.player_timer').text('Player: ' + playerTime);
+                                $('.timer').text(playerTime);
 
 
 
@@ -92,10 +92,10 @@
 
                         setInterval(generateScores, 10);
 
-
                     }
 
                 });
+
 
             })
 
@@ -108,8 +108,12 @@
 
         $('.startGame, .credits').addClass('hide');
 
+
         playerTime = 0;
         maxTime = 300;
+
+        $('.timer').text(playerTime);
+        $('.max_time').text(maxTime);
 
 
         gunman.move();
@@ -123,9 +127,11 @@
             console.log('YOU WIN!!!!')
         };
 
-        maxTime -= 100;
+        maxTime -= 50;
+        playerTime = 0;
 
-        $('.timer').text('Gunman: ' + maxTime);
+        $('.timer').text(playerTime);
+        $('.max_time').text(maxTime);
 
         function randomInteger(min, max) {
             var rand = min - 0.5 + Math.random() * (max - min + 1);
@@ -143,12 +149,6 @@
         gunman.currentGunman = randomInteger(1, 5);
 
         $('.button_next_level').addClass('hide');
-
-
-
-
-
-        $('.gunman').on('transitionend webkitTransitionEnd oTransitionEnd', gunman.readyForShoot())
 
         gunman.move();
         gunman.readyForShoot();
