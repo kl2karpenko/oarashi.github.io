@@ -31,8 +31,13 @@
                         //player don't shoot or shoot late
                         if (playerTime == maxTime) {
                             $('.message').addClass('hide');
-                            $('.startGame').removeClass('hide');
+                            $('.gunman').removeClass('gunman_' + gunman.currentGunman + '_standing');
                             clearInterval(intervalID);
+
+                            $('.gunman').off('click', gunman.readyForShoot());
+                            /*$('.gunman').off('transitionend webkitTransitionEnd oTransitionEnd', fire());*/
+                            $('.startGame').removeClass('hide');
+
 
                             playerTime = 0;
 
@@ -102,8 +107,11 @@
     function startNewGame() {
 
         $('.startGame, .credits').addClass('hide');
+
         playerTime = 0;
         maxTime = 300;
+
+
         gunman.move();
         gunman.readyForShoot();
     }

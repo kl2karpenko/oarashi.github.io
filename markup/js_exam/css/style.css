@@ -303,33 +303,38 @@
  }
 
  .gunman_5_standing {
-     background-position: -380px 1130px;
+     background-position: -380px 1150px;
+     height: 300px;
      width: 135px;
      left: 50%;
  }
 
  .gunman_5_falling {
      animation: gunman_5_falling 1.25s steps(2);
-     background-position: -1120px 1130px;
+     background-position: -1120px 1150px;
      left: 50%;
  }
 
  @keyframes gunman_5_walk {
      from {
-         background-position: 0px 1130px;
+         background-position: 0px 1150px;
+         height: 300px;
      }
      to {
-         background-position: -395px 1130px;
+         height: 300px;
+         background-position: -395px 1150px;
      }
  }
 
  @keyframes gunman_5_falling {
      from {
-         background-position: -795px 1130px;
+         background-position: -795px 1150px;
+         height: 300px;
          width: 125px;
      }
      to {
-         background-position: -1025px 1130px;
+         background-position: -1025px 1150px;
+         height: 300px;
          width: 100px;
      }
  }
