@@ -26,55 +26,66 @@
                     if (playerTime < maxTime) {
                         playerTime++;
                         $('.player_timer').text('Player: ' + playerTime);
+                        $('.message').removeClass('hide');
 
                         //player don't shoot or shoot late
                         if (playerTime == maxTime) {
+                            $('.message').addClass('hide');
                             $('.startGame').removeClass('hide');
                             clearInterval(intervalID);
-
-                            $('.gunman').removeClass('gunman_' + gunman.currentGunman + '_standing');
 
                             playerTime = 0;
 
                         };
+
                     };
 
-                    $('.gunman_timer').text('Gunman: ' + maxTime);
+                    $('.max_time').text(maxTime);
 
                 };
 
                 intervalID = setInterval(timer, 10);
 
 
-                $('.gunman').on('click', function () {
+                $('.gunman').on('click', function win() {
 
                     clearInterval(intervalID);
 
                     if (playerTime < maxTime) {
+                        $('.message').addClass('hide');
                         $('.gunman').removeClass('gunman_' + gunman.currentGunman + '_standing');
                         $('.gunman').addClass('gunman_' + gunman.currentGunman + '_falling');
-                        scores = (maxTime - playerTime) * 2;
 
-                        var scoreCounter = 0;
+                        var scoreCounter = scores;
+
+                        scores = scores + (maxTime - playerTime);
 
                         function generateScores() {
 
                             if (scoreCounter < scores) {
                                 scoreCounter++;
-                                $('.score').text('Your score:' + scoreCounter)
+                                $('.score').text(scoreCounter)
                             }
 
                             if (scoreCounter == scores) {
                                 $('.button_next_level').removeClass('undisplay');
 
                                 $('.gunman').removeClass('gunman_' + gunman.currentGunman + '_falling');
-                                $('.gunman').off('transitionend webkitTransitionEnd oTransitionEnd', fire)
+                                $('.gunman').off('transitionend webkitTransitionEnd oTransitionEnd', fire);
+                                $('.score').text(scores);
+
+                                playerTime = 0;
+
+                                $('.player_timer').text('Player: ' + playerTime);
+
+
+
 
                             }
 
                         }
 
-                        setInterval(generateScores, 1);
+                        setInterval(generateScores, 10);
 
 
                     }
@@ -99,16 +110,41 @@
 
     function nextLevel() {
 
-        $('.button_next_level').addClass('hide');
-
-
         level++;
         if (level >= 5) {
             console.log('YOU WIN!!!!')
         };
 
+        maxTime -= 100;
+
+        $('.timer').text('Gunman: ' + maxTime);
+
+        function randomInteger(min, max) {
+            var rand = min - 0.5 + Math.random() * (max - min + 1);
+            rand = Math.round(rand);
+
+            for (; rand == gunman.currentGunman;) {
+                rand = min - 0.5 + Math.random() * (max - min + 1);
+                rand = Math.round(rand);
+            }
+
+
+            return rand;
+        }
+
+        gunman.currentGunman = randomInteger(1, 5);
+
+        $('.button_next_level').addClass('hide');
+
+
+
+
+
+        $('.gunman').on('transitionend webkitTransitionEnd oTransitionEnd', gunman.readyForShoot())
+
         gunman.move();
         gunman.readyForShoot();
+
     }
 
 
