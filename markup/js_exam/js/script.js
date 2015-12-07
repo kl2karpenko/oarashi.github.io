@@ -25,7 +25,7 @@
                 function timer() {
                     if (playerTime < maxTime) {
                         playerTime++;
-                        $('.player_timer').text('Player: ' + playerTime);
+                        $('.timer').text(playerTime);
                         $('.message').removeClass('hide');
 
                         //player don't shoot or shoot late
@@ -35,17 +35,23 @@
                             clearInterval(intervalID);
 
                             $('.gunman').off('click', gunman.readyForShoot());
-                            /*$('.gunman').off('transitionend webkitTransitionEnd oTransitionEnd', fire());*/
+
                             $('.startGame').removeClass('hide');
 
 
                             playerTime = 0;
+
+                            $('.timer').text(playerTime);
+
+
+                            $('.gunman').off();
 
                         };
 
                     };
 
                     $('.max_time').text(maxTime);
+
 
                 };
 
@@ -83,19 +89,16 @@
 
                                 $('.timer').text(playerTime);
 
-
-
-
                             }
 
                         }
 
                         setInterval(generateScores, 10);
+                        $('.gunman').off();
 
                     }
 
                 });
-
 
             })
 
@@ -150,7 +153,10 @@
 
         $('.button_next_level').addClass('hide');
 
+
+
         gunman.move();
+
         gunman.readyForShoot();
 
     }
