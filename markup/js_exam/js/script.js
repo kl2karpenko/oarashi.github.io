@@ -33,12 +33,12 @@
 
                 function timer() {
                     console.log(playerTime + ' and ' + maxTime);
+
                     if (playerTime < maxTime) {
                         playerTime++;
                         $('.timer').text(playerTime);
                         $('.message').removeClass('hide');
                     }
-
 
                     if (playerTime < maxTime) {
                         playerTime++;
@@ -103,7 +103,6 @@
 
                                 $('.score').text(scores);
 
-                                playerTime = 0;
 
                                 $('.timer').text(playerTime);
 
@@ -169,6 +168,7 @@
             console.log('YOU WIN!!!!')
         };
 
+        playerTime = 0;
         maxTime -= 50;
 
         $('.timer').text(playerTime);
