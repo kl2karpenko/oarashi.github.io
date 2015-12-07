@@ -13,13 +13,26 @@
 
     <script src="../../js_exam/js/jquery.js"></script>
     <script>
-        $('.space').on('click', function () {
-            var a = $('.space');
-            console.log(a)
-        })
+        /*var i = 0;
+               function timer(i) {
 
+                for (var j = i; j < 10; j++) {i++; console.log(i)}
+               };
+        setInterval(function(){timer(i)}, 100);*/
 
+        /*function timer() {
+            var i = 0;
+            for (var j =i; j < 10; j++) {i++;console.log(i)};
+        }
+        setInterval(timer, 100)*/
 
+        setInterval(function(){
+  var i=1;
+  while(i<=10){
+    alert(i);
+    i++;
+  }
+ },1);
     </script>
 </body>
 
